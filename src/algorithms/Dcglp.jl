@@ -1,6 +1,14 @@
 
 """
-Run DCGLP cutting-plane
+Run DCGLP cutting-plane algorithm.
+
+The algorithm can execute the two typical oracles (kappa and nu) either serially or in parallel,
+depending on the oracle's parallel configuration. Parallel execution is controlled by:
+- `oracle.oracle_param.enable_parallel`: Enable/disable parallel execution (default: false)
+- `oracle.oracle_param.max_threads`: Maximum number of threads to use (default: nothing, uses min(2, Threads.nthreads()))
+
+When parallel execution is enabled, the two oracle calls are performed concurrently with proper
+thread-safe handling of shared data structures and exception propagation.
 """
 
 function solve_dcglp!(oracle::DisjunctiveOracle, x_value::Vector{Float64}, t_value::Vector{Float64}, zero_indices::Vector{Int64}, one_indices::Vector{Int64}; zero_tol = 1e-9, time_limit = time_limit, throw_typical_cuts_for_errors = true, include_disjuctive_cuts_to_hyperplanes = true)
@@ -74,30 +82,83 @@ function solve_dcglp!(oracle::DisjunctiveOracle, x_value::Vector{Float64}, t_val
             ω_x = state.values[:ω_x]
             ω_t = state.values[:ω_t]
             ω_0 = state.values[:ω_0]
-            # my_lock = Threads.ReentrantLock()
-            # Threads.@threads for i in 1:2
-            for i in 1:2
-                # Threads.lock(my_lock) do
-                state.oracle_times[i] = @elapsed begin
-                    if ω_0[i] >= zero_tol
-                        state.is_in_L[i], hyperplanes_a, state.f_x[i] = generate_cuts(typical_oracles[i], clamp.(ω_x[i] / ω_0[i], 0.0, 1.0), ω_t[i] / ω_0[i], tol = zero_tol / ω_0[i], time_limit = get_sec_remaining(log.start_time, time_limit))
+            
+            # Calculate remaining time once for parallel execution
+            remaining_time = get_sec_remaining(log.start_time, time_limit)
+            
+            if oracle.oracle_param.enable_parallel
+                # Determine number of threads to use
+                max_threads = oracle.oracle_param.max_threads === nothing ? 
+                             min(2, Threads.nthreads()) : 
+                             min(2, oracle.oracle_param.max_threads)
+                
+                # Thread-local storage for hyperplanes
+                hyperplanes_local = Vector{Vector{Hyperplane}}(undef, 2)
+                exceptions = Vector{Union{Exception,Nothing}}(undef, 2)
+                fill!(exceptions, nothing)
+                
+                # Parallel execution
+                Threads.@threads for i in 1:2
+                    hyperplanes_local[i] = Vector{Hyperplane}()
+                    try
+                        state.oracle_times[i] = @elapsed begin
+                            if ω_0[i] >= zero_tol
+                                state.is_in_L[i], hyperplanes_a, state.f_x[i] = generate_cuts(typical_oracles[i], clamp.(ω_x[i] / ω_0[i], 0.0, 1.0), ω_t[i] / ω_0[i], tol = zero_tol / ω_0[i], time_limit = remaining_time)
 
-                        # adjust the tolerance with respect to dcglp: (sum(state.sub_obj_vals[i]) - sum(t_value)) * omega_value[:z][i] < zero_tol
-                        if !state.is_in_L[i]
-                            for k = 1:2 # add to both kappa and nu systems
-                                append!(benders_cuts[i], hyperplanes_to_expression(dcglp, hyperplanes_a, dcglp[:omega_x][k,:], dcglp[:omega_t][k,:], dcglp[:omega_0][k]))
-                            end
-                            if oracle.oracle_param.add_benders_cuts_to_master != 0
-                                add_violated = oracle.oracle_param.add_benders_cuts_to_master == 2
-                                append!(hyperplanes, select_top_fraction(hyperplanes_a, h -> evaluate_violation(h, x_value, t_value), oracle.oracle_param.fraction_of_benders_cuts_to_master; add_only_violated_cuts = add_violated)) 
+                                # adjust the tolerance with respect to dcglp: (sum(state.sub_obj_vals[i]) - sum(t_value)) * omega_value[:z][i] < zero_tol
+                                if !state.is_in_L[i]
+                                    for k = 1:2 # add to both kappa and nu systems
+                                        append!(benders_cuts[i], hyperplanes_to_expression(dcglp, hyperplanes_a, dcglp[:omega_x][k,:], dcglp[:omega_t][k,:], dcglp[:omega_0][k]))
+                                    end
+                                    if oracle.oracle_param.add_benders_cuts_to_master != 0
+                                        add_violated = oracle.oracle_param.add_benders_cuts_to_master == 2
+                                        append!(hyperplanes_local[i], select_top_fraction(hyperplanes_a, h -> evaluate_violation(h, x_value, t_value), oracle.oracle_param.fraction_of_benders_cuts_to_master; add_only_violated_cuts = add_violated)) 
+                                    end
+                                end
+                            else
+                                state.is_in_L[i] = true
+                                state.f_x[i] = zeros(length(t_value))
                             end
                         end
-                    else
-                        state.is_in_L[i] = true
-                        state.f_x[i] = zeros(length(t_value))
+                    catch e
+                        exceptions[i] = e
                     end
                 end
-                # end
+                
+                # Check for exceptions and propagate them
+                for i in 1:2
+                    if exceptions[i] !== nothing
+                        throw(exceptions[i])
+                    end
+                end
+                
+                # Thread-safe merge of hyperplanes
+                for i in 1:2
+                    append!(hyperplanes, hyperplanes_local[i])
+                end
+            else
+                # Serial execution (original logic)
+                for i in 1:2
+                    state.oracle_times[i] = @elapsed begin
+                        if ω_0[i] >= zero_tol
+                            state.is_in_L[i], hyperplanes_a, state.f_x[i] = generate_cuts(typical_oracles[i], clamp.(ω_x[i] / ω_0[i], 0.0, 1.0), ω_t[i] / ω_0[i], tol = zero_tol / ω_0[i], time_limit = get_sec_remaining(log.start_time, time_limit))
+
+                            # adjust the tolerance with respect to dcglp: (sum(state.sub_obj_vals[i]) - sum(t_value)) * omega_value[:z][i] < zero_tol
+                            if !state.is_in_L[i]
+                                for k = 1:2 # add to both kappa and nu systems
+                                    append!(benders_cuts[i], hyperplanes_to_expression(dcglp, hyperplanes_a, dcglp[:omega_x][k,:], dcglp[:omega_t][k,:], dcglp[:omega_0][k]))
+                                end
+                                if oracle.oracle_param.add_benders_cuts_to_master != 0
+                                    add_violated = oracle.oracle_param.add_benders_cuts_to_master == 2
+                                    append!(hyperplanes, select_top_fraction(hyperplanes_a, h -> evaluate_violation(h, x_value, t_value), oracle.oracle_param.fraction_of_benders_cuts_to_master; add_only_violated_cuts = add_violated)) 
+                                end
+                            end
+                        else
+                            state.is_in_L[i] = true
+                            state.f_x[i] = zeros(length(t_value))
+                        end
+                    end
+                end
             end
         
             if state.f_x[1] !== NaN && state.f_x[2] !== NaN
