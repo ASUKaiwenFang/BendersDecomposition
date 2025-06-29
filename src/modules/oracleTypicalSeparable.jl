@@ -2,6 +2,15 @@ export SeparableOracle, SeparableOracleParam
 
 mutable struct SeparableOracleParam <: AbstractOracleParam
     # may contain parameters for scenario handling.
+    enable_parallel::Bool
+    max_threads::Union{Int,Nothing}
+    
+    function SeparableOracleParam(;
+        enable_parallel::Bool = false,
+        max_threads::Union{Int,Nothing} = nothing
+    )
+        new(enable_parallel, max_threads)
+    end
 end
 
 mutable struct SeparableOracle <: AbstractTypicalOracle
@@ -31,15 +40,40 @@ function generate_cuts(oracle::SeparableOracle, x_value::Vector{Float64}, t_valu
     sub_obj_val = Vector{Vector{Float64}}(undef,N)
     hyperplanes = Vector{Vector{Hyperplane}}(undef,N)
 
-    # do threads?
-    for j=1:N
-        is_in_L[j], hyperplanes[j], sub_obj_val[j] = generate_cuts(oracle.oracles[j], x_value, [t_value[j]]; tol=tol, time_limit=get_sec_remaining(tic, time_limit))
+    # Calculate remaining time once for parallel execution
+    remaining_time = get_sec_remaining(tic, time_limit)
+    
+    if oracle.oracle_param.enable_parallel
+        # Determine number of threads to use
+        max_threads = oracle.oracle_param.max_threads === nothing ? 
+                     min(N, Threads.nthreads()) : 
+                     min(N, oracle.oracle_param.max_threads)
+        
+        # Parallel execution
+        Threads.@threads for j=1:N
+            is_in_L[j], hyperplanes[j], sub_obj_val[j] = generate_cuts(oracle.oracles[j], x_value, [t_value[j]]; tol=tol, time_limit=remaining_time)
+        end
+        
+        # Parallel post-processing of hyperplanes
+        Threads.@threads for j=1:N
+            # correct dimension for t_j's
+            for h in hyperplanes[j]
+                coeff_t = h.a_t[1]
+                h.a_t = spzeros(length(t_value)) 
+                h.a_t[j] = coeff_t
+            end
+        end
+    else
+        # Serial execution (original logic)
+        for j=1:N
+            is_in_L[j], hyperplanes[j], sub_obj_val[j] = generate_cuts(oracle.oracles[j], x_value, [t_value[j]]; tol=tol, time_limit=get_sec_remaining(tic, time_limit))
 
-        # correct dimension for t_j's
-        for h in hyperplanes[j]
-            coeff_t = h.a_t[1]
-            h.a_t = spzeros(length(t_value)) 
-            h.a_t[j] = coeff_t
+            # correct dimension for t_j's
+            for h in hyperplanes[j]
+                coeff_t = h.a_t[1]
+                h.a_t = spzeros(length(t_value)) 
+                h.a_t[j] = coeff_t
+            end
         end
     end
 

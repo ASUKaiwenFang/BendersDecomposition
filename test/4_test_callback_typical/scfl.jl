@@ -174,6 +174,65 @@ include("$(dirname(dirname(@__DIR__)))/example/scflp/model.jl")
                     @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
                 end
             end
+            
+            # Test parallel implementations
+            @testset "Classic oracle - Parallel" begin
+                @testset "Seq - Parallel" begin
+                    @info "solving SCFLP f25-c50-s64-r10-$i - classical oracle - seq - parallel..."
+                    master = Master(data; solver_param = master_solver_param)
+                    update_model!(master, data)
+                    
+                    oracle_param_parallel = SeparableOracleParam(enable_parallel=true, max_threads=4)
+                    typical_oracle = SeparableOracle(data, ClassicalOracle(), data.problem.n_scenarios; 
+                                                   solver_param = typical_oracle_solver_param,
+                                                   oracle_param = oracle_param_parallel)
+                    for j=1:typical_oracle.N
+                        update_model!(typical_oracle.oracles[j], data, j)
+                    end
+                    root_seq_type = BendersSeq
+                    root_param = BendersSeqParam(;
+                        time_limit = 200.0,
+                        gap_tolerance = 1e-6,
+                        verbose = false
+                    )
+                    root_preprocessing = RootNodePreprocessing(typical_oracle, root_seq_type, root_param)
+                    lazy_callback = LazyCallback(typical_oracle)
+                    user_callback = NoUserCallback()
+                    env = BendersBnB(data, master, root_preprocessing, lazy_callback, user_callback; param = benders_param)
+                    log = solve!(env)
+                    @test env.termination_status == Optimal()
+                    @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
+                end
+            end
+            
+            @testset "Knapsack oracle - Parallel" begin
+                @testset "Seq - Parallel" begin
+                    @info "solving SCFLP f25-c50-s64-r10-$i - knapsack oracle - seq - parallel..."
+                    master = Master(data; solver_param = master_solver_param)
+                    update_model!(master, data)
+                    
+                    oracle_param_parallel = SeparableOracleParam(enable_parallel=true, max_threads=4)
+                    typical_oracle = SeparableOracle(data, CFLKnapsackOracle(), data.problem.n_scenarios; 
+                                                   solver_param = typical_oracle_solver_param,
+                                                   oracle_param = oracle_param_parallel)
+                    for j=1:typical_oracle.N
+                        update_model!(typical_oracle.oracles[j], data, j)
+                    end
+                    root_seq_type = BendersSeq
+                    root_param = BendersSeqParam(;
+                        time_limit = 200.0,
+                        gap_tolerance = 1e-6,
+                        verbose = false
+                    )
+                    root_preprocessing = RootNodePreprocessing(typical_oracle, root_seq_type, root_param)
+                    lazy_callback = LazyCallback(typical_oracle)
+                    user_callback = NoUserCallback()
+                    env = BendersBnB(data, master, root_preprocessing, lazy_callback, user_callback; param = benders_param)
+                    log = solve!(env)
+                    @test env.termination_status == Optimal()
+                    @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
+                end
+            end
         end
     end
 end

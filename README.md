@@ -14,6 +14,7 @@ This repository contains the source code and computational experiments for disju
 - **Multiple Algorithm Variants**: Implementation of sequential and callback-based Benders decomposition algorithms
 - **Disjunctive Cuts**: Integration of disjunctive programming techniques for enhanced cut generation
 - **Flexible Oracle System**: Modular oracle design supporting different subproblem types (typical, disjunctive, separable)
+- **Parallel Processing**: Multi-threaded execution support for separable oracle problems using `Threads.@threads`
 - **Comprehensive Testing**: Extensive test suite with multiple problem instances
 - **Multiple Problem Types**: Support for facility location problems (UFLP, CFLP, SCFLP), network design (MCNDP), and other optimization problems
 
@@ -55,6 +56,25 @@ Pkg.instantiate()
 ## Usage
 
 We provide several scripts to run the algorithms on different problem instances. Please refer to the `scripts/` directory for more details.
+
+### Parallel Processing
+
+For problems with separable subproblems, you can enable parallel processing to accelerate computation:
+
+```julia
+# Create a parallel-enabled separable oracle
+oracle_param_parallel = SeparableOracleParam(enable_parallel=true, max_threads=4)
+oracle = SeparableOracle(data, ClassicalOracle(), n_scenarios; 
+                        solver_param = solver_param,
+                        oracle_param = oracle_param_parallel)
+
+# The oracle will now use up to 4 threads for parallel subproblem solving
+```
+
+**Performance Notes**: 
+- Parallel processing is most beneficial for problems with many scenarios (hundreds) and significant per-scenario computation time (several seconds)
+- Set `max_threads=nothing` to use all available CPU cores
+- Ensure your solver (e.g., CPLEX) supports concurrent usage across threads
 
 ## Testing
 

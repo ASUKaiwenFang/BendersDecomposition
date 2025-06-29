@@ -227,6 +227,65 @@ include("$(dirname(dirname(@__DIR__)))/example/cflp/oracle.jl")
                     end
                 end
             end
+            
+            # Test parallel implementations with simplified parameters
+            @testset "Classic oracle - Parallel" begin
+                @testset "Seq - Parallel" begin
+                    # Use simplified parameter set for parallel testing
+                    oracle_param_parallel = SeparableOracleParam(enable_parallel=true, max_threads=4)
+                    
+                    lazy_oracle = SeparableOracle(data, ClassicalOracle(), data.problem.n_scenarios; 
+                                                solver_param = typical_oracle_solver_param,
+                                                oracle_param = oracle_param_parallel)
+                    for j=1:lazy_oracle.N
+                        update_model!(lazy_oracle.oracles[j], data, j)
+                    end
+                    typical_oracle_kappa = SeparableOracle(data, ClassicalOracle(), data.problem.n_scenarios; 
+                                                          solver_param = typical_oracle_solver_param,
+                                                          oracle_param = oracle_param_parallel)
+                    typical_oracle_nu = SeparableOracle(data, ClassicalOracle(), data.problem.n_scenarios; 
+                                                       solver_param = typical_oracle_solver_param,
+                                                       oracle_param = oracle_param_parallel)
+                    for j=1:typical_oracle_kappa.N
+                        update_model!(typical_oracle_kappa.oracles[j], data, j)
+                    end
+                    for j=1:typical_oracle_nu.N
+                        update_model!(typical_oracle_nu.oracles[j], data, j)
+                    end
+                    typical_oracles = [typical_oracle_kappa; typical_oracle_nu]
+                    
+                    disjunctive_oracle = DisjunctiveOracle(data, typical_oracles; 
+                        solver_param = dcglp_solver_param,
+                        param = dcglp_param
+                    ) 
+
+                    # Set oracle parameters with simplified settings
+                    oracle_param = DisjunctiveOracleParam(
+                        norm = LpNorm(1.0), 
+                        split_index_selection_rule = RandomFractional(),
+                        disjunctive_cut_append_rule = NoDisjunctiveCuts(), 
+                        strengthened = true, 
+                        add_benders_cuts_to_master = true, 
+                        fraction_of_benders_cuts_to_master = 0.5, 
+                        reuse_dcglp = false,
+                        lift = false,
+                        adjust_t_to_fx = false
+                    )
+                    set_parameter!(disjunctive_oracle, oracle_param)
+                    update_model!(disjunctive_oracle, data)
+                    
+                    @info "solving SCFLP f25-c50-s64-r10-$i - disjunctive oracle/classical/seq - parallel"
+                    master = Master(data; solver_param = master_solver_param)
+                    update_model!(master, data)
+                    root_preprocessing = RootNodePreprocessing(lazy_oracle, BendersSeq, BendersSeqParam(;time_limit=200.0, gap_tolerance=1e-6, verbose=false))
+                    lazy_callback = LazyCallback(lazy_oracle)
+                    user_callback = UserCallback(disjunctive_oracle; params=user_cb_param)
+                    env = BendersBnB(data, master, root_preprocessing, lazy_callback, user_callback; param = benders_param)
+                    log = solve!(env)
+                    @test env.termination_status == Optimal()
+                    @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
+                end
+            end
 
         end
     end

@@ -58,12 +58,50 @@ include("$(dirname(dirname(@__DIR__)))/example/scflp/model.jl")
                 @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
             end 
             
+            @testset "Classic oracle - Parallel" begin
+                @info "solving SCFLP f25-c50-s64-r10-$i - classical oracle - seqInOut - parallel..."
+                master = Master(data; solver_param = master_solver_param)
+                update_model!(master, data)
+
+                oracle_param_parallel = SeparableOracleParam(enable_parallel=true, max_threads=4)
+                oracle = SeparableOracle(data, ClassicalOracle(), data.problem.n_scenarios; 
+                                       solver_param = typical_oracal_solver_param,
+                                       oracle_param = oracle_param_parallel)
+                for j=1:oracle.N
+                    update_model!(oracle.oracles[j], data, j)
+                end
+
+                env = BendersSeqInOut(data, master, oracle; param = benders_inout_param)
+                log = solve!(env)
+                @test env.termination_status == Optimal()
+                @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
+            end 
+            
             @testset "Knapsack oracle" begin
                 @info "solving SCFLP f25-c50-s64-r10-$i - knapsack oracle - seqInOut..."
                 master = Master(data; solver_param = master_solver_param)
                 update_model!(master, data)
 
                 oracle = SeparableOracle(data, CFLKnapsackOracle(), data.problem.n_scenarios; solver_param = typical_oracal_solver_param)
+                for j=1:oracle.N
+                    update_model!(oracle.oracles[j], data, j)
+                end
+
+                env = BendersSeqInOut(data, master, oracle; param = benders_inout_param)
+                log = solve!(env)
+                @test env.termination_status == Optimal()
+                @test isapprox(mip_opt_val, env.obj_value, atol=1e-5)
+            end
+            
+            @testset "Knapsack oracle - Parallel" begin
+                @info "solving SCFLP f25-c50-s64-r10-$i - knapsack oracle - seqInOut - parallel..."
+                master = Master(data; solver_param = master_solver_param)
+                update_model!(master, data)
+
+                oracle_param_parallel = SeparableOracleParam(enable_parallel=true, max_threads=4)
+                oracle = SeparableOracle(data, CFLKnapsackOracle(), data.problem.n_scenarios; 
+                                       solver_param = typical_oracal_solver_param,
+                                       oracle_param = oracle_param_parallel)
                 for j=1:oracle.N
                     update_model!(oracle.oracles[j], data, j)
                 end
