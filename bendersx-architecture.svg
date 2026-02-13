@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <style>
+      .title { font-family: "Times New Roman", Times, serif; font-size: 30px; font-weight: 700; fill: #111; }
+      .subtitle { font-family: "Helvetica", Arial, sans-serif; font-size: 14px; fill: #222; }
+      .cluster-title { font-family: "Times New Roman", Times, serif; font-size: 18px; font-weight: 700; fill: #111; }
+      .box-title { font-family: "Helvetica", Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #111; }
+      .box-text { font-family: "Helvetica", Arial, sans-serif; font-size: 12px; fill: #111; }
+      .label { font-family: "Helvetica", Arial, sans-serif; font-size: 11px; fill: #111; }
+      .outer { fill: #fff; stroke: #2b2b2b; stroke-width: 1.5; }
+      .loop { fill: #fff; stroke: #2b2b2b; stroke-width: 1.3; stroke-dasharray: 9 6; }
+      .base { fill: #dfeeff; stroke: #2b2b2b; stroke-width: 1.2; }
+      .ext { fill: #eaf7ea; stroke: #2b2b2b; stroke-width: 1.2; }
+      .box { fill: #fff; stroke: #2b2b2b; stroke-width: 1.2; }
+      .band { fill: #fff8dc; stroke: #2b2b2b; stroke-width: 1.2; }
+      .arrow { stroke: #222; stroke-width: 1.7; fill: none; marker-end: url(#arrow); }
+      .arrow-dashed { stroke: #222; stroke-width: 1.5; fill: none; stroke-dasharray: 7 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#222" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="860" fill="#fff" />
+
+  <text x="700" y="44" text-anchor="middle" class="title">BendersX Architecture</text>
+  <text x="700" y="68" text-anchor="middle" class="subtitle">BendersBase provides the core workflow; BendersLibrary plugs in extensions</text>
+
+  <!-- Outer environment -->
+  <rect x="60" y="86" width="1280" height="690" rx="24" class="outer" />
+  <text x="90" y="120" class="cluster-title">Environment</text>
+
+  <!-- Core loop (as in sketch) -->
+  <rect x="120" y="140" width="910" height="360" rx="40" class="loop" />
+
+  <rect x="500" y="178" width="220" height="76" rx="10" class="box" />
+  <text x="610" y="210" text-anchor="middle" class="box-title">Master</text>
+  <text x="610" y="232" text-anchor="middle" class="box-text">core model</text>
+
+  <rect x="180" y="262" width="220" height="118" rx="10" class="box" />
+  <text x="290" y="294" text-anchor="middle" class="box-title">Loop Strategy</text>
+  <text x="290" y="318" text-anchor="middle" class="box-text">control and schedule</text>
+
+  <rect x="500" y="392" width="220" height="76" rx="10" class="box" />
+  <text x="610" y="424" text-anchor="middle" class="box-title">Oracle</text>
+  <text x="610" y="446" text-anchor="middle" class="box-text">separation and cuts</text>
+
+  <rect x="860" y="252" width="150" height="150" rx="10" class="box" />
+  <text x="935" y="286" text-anchor="middle" class="box-title">Log</text>
+  <text x="935" y="310" text-anchor="middle" class="box-text">monitoring</text>
+
+  <!-- Core arrows -->
+  <path d="M590,254 L590,392" class="arrow" />
+  <text x="545" y="330" class="label">(x,t)</text>
+
+  <path d="M630,392 L630,254" class="arrow" />
+  <text x="647" y="330" class="label">cut</text>
+
+  <path d="M400,320 C455,320 470,245 500,216" class="arrow-dashed" />
+  <path d="M400,340 C455,372 470,410 500,430" class="arrow-dashed" />
+
+  <path d="M720,215 L860,290" class="arrow-dashed" />
+  <path d="M720,430 L860,340" class="arrow-dashed" />
+
+  <!-- Environments list -->
+  <rect x="140" y="520" width="250" height="150" rx="10" class="box" />
+  <text x="265" y="552" text-anchor="middle" class="box-title">Environments</text>
+  <text x="265" y="580" text-anchor="middle" class="box-text">BendersSeq</text>
+  <text x="265" y="604" text-anchor="middle" class="box-text">BendersBnB</text>
+
+  <!-- BendersBase foundation block -->
+  <rect x="430" y="500" width="520" height="220" rx="12" class="base" opacity="0.84" />
+  <rect x="430" y="500" width="520" height="220" rx="12" class="outer" fill="none" />
+  <text x="455" y="532" class="cluster-title">BendersBase (Foundation)</text>
+
+  <rect x="460" y="550" width="255" height="145" rx="10" class="box" />
+  <text x="588" y="576" text-anchor="middle" class="box-title">Typical Oracles</text>
+  <rect x="482" y="590" width="210" height="24" rx="6" class="box" />
+  <text x="587" y="607" text-anchor="middle" class="box-text">Classical</text>
+  <rect x="482" y="620" width="210" height="24" rx="6" class="box" />
+  <text x="587" y="637" text-anchor="middle" class="box-text">Pareto</text>
+  <rect x="482" y="650" width="210" height="24" rx="6" class="box" />
+  <text x="587" y="667" text-anchor="middle" class="box-text">Unified</text>
+
+  <rect x="735" y="550" width="185" height="145" rx="10" class="box" />
+  <text x="828" y="576" text-anchor="middle" class="box-title">Separable</text>
+  <rect x="765" y="618" width="125" height="44" rx="8" class="box" />
+  <text x="828" y="644" text-anchor="middle" class="box-text">typical</text>
+
+  <!-- BendersLibrary extension block -->
+  <rect x="980" y="500" width="280" height="220" rx="12" class="ext" opacity="0.84" />
+  <rect x="980" y="500" width="280" height="220" rx="12" class="outer" fill="none" />
+  <text x="1005" y="532" class="cluster-title">BendersLibrary</text>
+
+  <rect x="1010" y="552" width="220" height="56" rx="8" class="box" />
+  <text x="1120" y="584" text-anchor="middle" class="box-text">problem extensions</text>
+
+  <rect x="1010" y="620" width="220" height="70" rx="8" class="box" />
+  <text x="1120" y="648" text-anchor="middle" class="box-title">Disjunctive</text>
+  <text x="1120" y="670" text-anchor="middle" class="box-text">and other variants</text>
+
+  <!-- Connectors from lower blocks to loop -->
+  <path d="M265,520 L290,380" class="arrow-dashed" />
+  <path d="M610,468 L610,500" class="arrow" />
+  <path d="M980,610 L724,430" class="arrow-dashed" />
+
+  <!-- Plug-and-play principle band -->
+  <rect x="170" y="790" width="1060" height="56" rx="10" class="band" />
+
+  <!-- Plug icon -->
+  <g transform="translate(205,799)">
+    <rect x="0" y="8" width="78" height="32" rx="6" fill="#dfeeff" stroke="#2b2b2b" stroke-width="1.1" />
+    <rect x="66" y="17" width="8" height="14" rx="2" fill="#fff" stroke="#2b2b2b" stroke-width="1.0" />
+    <rect x="94" y="11" width="48" height="26" rx="5" fill="#eaf7ea" stroke="#2b2b2b" stroke-width="1.1" />
+    <rect x="88" y="18" width="6" height="12" rx="2" fill="#eaf7ea" stroke="#2b2b2b" stroke-width="1.0" />
+    <path d="M90,24 L74,24" stroke="#222" stroke-width="1.2" stroke-dasharray="3 2" fill="none" marker-end="url(#arrow)" />
+  </g>
+
+  <text x="720" y="824" text-anchor="middle" class="box-text">Plug-and-play extension: BendersBase stays stable while BendersLibrary attaches interchangeable modules.</text>
+</svg>
