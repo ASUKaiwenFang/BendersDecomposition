@@ -453,22 +453,26 @@
      class="base"
      id="path22" />
   <path
-     d="m 783.07792,589.76477 -32.06597,11.96833 v 33.51132 l 32.06597,11.96833"
+     d="M782,594 L752,605 L752,635 L782,646"
      class="iface-line"
      id="path24-4-5"
      style="fill:none;stroke:#5bb8f2;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
   <path
-     d="m 782.11777,592.7474 -28.7861,11.18437 V 635.248 l 28.7861,11.18437"
+     d="M782,592 L750,603 L750,637 L782,648"
      class="iface-line"
      id="path24-4-2"
      style="fill:none;stroke:#5bb8f2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M782,590 L748,601 L748,639 L782,650"
+     class="iface-line"
+     id="path24-4-3" />
   <path
      d="M268,520 L782,520 L782,596 L754,606 L754,634 L782,644 L782,720 L268,720 Z"
      class="outer"
      id="path23" />
   <path
      d="M782,596 L754,606 L754,634 L782,644"
-     class="iface-line"
+     class="outer"
      id="path24" />
   <text
      x="285"
@@ -568,11 +572,6 @@
      d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L812,634 L812,606 L840,596 Z"
      class="outer"
      id="path32" />
-  <path
-     d="m 839.48877,596.14045 -26,10 v 28 l 26,10"
-     class="iface-line"
-     id="path24-4"
-     style="fill:none;stroke:#5bb8f2;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" />
   <path
      d="m 823.10112,546.07865 h -36"
      stroke="#475569"
