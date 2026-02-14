@@ -449,7 +449,7 @@
      id="text22">BendersSeqInOut</text>
   <!-- BendersBase foundation block -->
   <path
-     d="M268,520 L782,520 L782,596 L756,606 L756,634 L782,644 L782,720 L268,720 Z"
+     d="M268,520 L782,520 L782,596 L754,606 L754,634 L782,644 L782,720 L268,720 Z"
      class="base"
      id="path22" />
   <path
@@ -463,11 +463,11 @@
      id="path24-4-2"
      style="fill:none;stroke:#5bb8f2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
   <path
-     d="M268,520 L782,520 L782,596 L756,606 L756,634 L782,644 L782,720 L268,720 Z"
+     d="M268,520 L782,520 L782,596 L754,606 L754,634 L782,644 L782,720 L268,720 Z"
      class="outer"
      id="path23" />
   <path
-     d="M782,596 L756,606 L756,634 L782,644"
+     d="M782,596 L754,606 L754,634 L782,644"
      class="iface-line"
      id="path24" />
   <text
@@ -561,11 +561,11 @@
      id="text31">TypicalOracle</text>
   <!-- BendersLibrary extension block -->
   <path
-     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L822,634 L812,620 L822,606 L840,596 Z"
+     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L812,634 L812,606 L840,596 Z"
      class="ext"
      id="path31" />
   <path
-     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L822,634 L812,620 L822,606 L840,596 Z"
+     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L812,634 L812,606 L840,596 Z"
      class="outer"
      id="path32" />
   <path
