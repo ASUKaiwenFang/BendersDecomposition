@@ -361,9 +361,13 @@
      id="path13" />
   <!-- Environment variants (outside loop, left side) -->
   <path
-     d="M97,214 L233,214 L233,300 L177,300 L171,316 L159,316 L153,300 L97,300 Z"
+     d="M97,214 L233,214 L233,300 L177,300 L171,284 L159,284 L153,300 L97,300 Z"
      class="base"
      id="path14" />
+  <path
+     d="M97,214 L233,214 L233,300 L177,300 L171,284 L159,284 L153,300 L97,300 Z"
+     class="outer"
+     id="path14-outer" />
   <text
      x="165"
      y="238"
@@ -400,19 +404,19 @@
      id="text16">BendersBnB</text>
   <!-- Plug-and-play marker (BendersLibrary inserts into BendersBase) -->
   <path
-     d="M177,300 L171,316 L159,316 L153,300"
-     class="iface-line"
+     d="M153,300 L159,284 L171,284 L177,300"
+     class="outer"
      id="path16" />
   <path
-     d="M175,302 L169,314 L161,314 L155,302"
+     d="M153,302 L159,286 L171,286 L177,302"
      class="iface-line"
      id="path17" />
   <path
-     d="M153,336 L159,316 L171,316 L177,336"
+     d="M151,304 L157,288 L173,288 L179,304"
      class="iface-line"
      id="path18" />
   <path
-     d="M155,334 L161,318 L169,318 L175,334"
+     d="M149,306 L155,290 L175,290 L181,306"
      class="iface-line"
      id="path19" />
   <path
@@ -424,9 +428,13 @@
      marker-end="url(#arrow)"
      id="path20" />
   <path
-     d="M97,336 L153,336 L159,316 L171,316 L177,336 L233,336 L233,424 L97,424 Z"
+     d="M97,336 L153,336 L159,320 L171,320 L177,336 L233,336 L233,424 L97,424 Z"
      class="ext"
      id="path21" />
+  <path
+     d="M97,336 L153,336 L159,320 L171,320 L177,336 L233,336 L233,424 L97,424 Z"
+     class="outer"
+     id="path21-outer" />
   <text
      x="165"
      y="360"
@@ -710,34 +718,34 @@
      id="rect44" />
   <!-- Plug-and-slot legend -->
   <g
-     transform="rotate(-0.42903814,105268.69,-27088.1)"
+     transform="matrix(1.25,0,0,1.25,177.789,780.749)"
      id="g50">
     <path
-       d="m 0,8 h 78 v 10 l -12,4 v 4 l 12,4 V 40 H 0 Z"
+       d="M 0,6 H 104 V 14 L 90,19 V 33 L 104,38 V 44 H 0 Z"
        fill="#eaf2ff"
        stroke="#334155"
        stroke-width="1"
        id="path45" />
     <path
-       d="m 78,18 -12,4 v 4 l 12,4"
+       d="M 104,13 L 89,18 V 34 L 104,39"
        class="iface-line"
        id="path46" />
     <path
-       d="m 75,19 -7,3.5 v 3 l 7,3.5"
+       d="M 104,12 L 88,17 V 35 L 104,40"
        class="iface-line"
        id="path47" />
     <path
-       d="m 94,11 h 48 V 37 H 94 v -6 l -8,-4 -4,-3 4,-3 8,-4 z"
+       d="M 104,11 L 87,16 V 36 L 104,41"
+       class="iface-line"
+       id="path47-2" />
+    <path
+       d="M 120,6 H 224 V 44 H 120 V 38 L 106,33 V 19 L 120,14 Z"
        fill="#e9f7ef"
        stroke="#334155"
        stroke-width="1"
        id="path48" />
     <path
-       d="m 94,17 -8,4 -4,3 4,3 8,4"
-       class="iface-line"
-       id="path49" />
-    <path
-       d="M 90,24 H 74"
+       d="M 114,26 H 98"
        stroke="#475569"
        stroke-width="1.1"
        stroke-dasharray="4, 3"
