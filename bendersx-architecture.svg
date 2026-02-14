@@ -488,7 +488,7 @@
      y="584"
      text-anchor="middle"
      class="box-title"
-     id="text26">TypicalOracle</text>
+     id="text26">General TypicalOracle</text>
   <rect
      x="371.55557"
      y="605.85895"
@@ -614,7 +614,7 @@
      y="606"
      text-anchor="middle"
      class="box-title"
-     id="text37">Oracle</text>
+     id="text37">TypicalOracle</text>
   <rect
      x="891"
      y="618"
@@ -756,7 +756,7 @@
   <text
      xml:space="preserve"
      id="text51"
-     style="fill:#1a1a1a;text-orientation:auto;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect51)" />
+     style="writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect51);display:inline;fill:#1a1a1a" />
   <text
      xml:space="preserve"
      style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
