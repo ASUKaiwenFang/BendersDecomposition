@@ -361,11 +361,11 @@
      id="path13" />
   <!-- Environment variants (outside loop, left side) -->
   <path
-     d="M97,214 L233,214 L233,300 L177,300 L171,284 L159,284 L153,300 L97,300 Z"
+     d="M90,214 L240,214 L240,350 L189,350 L179,322 L151,322 L141,350 L90,350 Z"
      class="base"
      id="path14" />
   <path
-     d="M97,214 L233,214 L233,300 L177,300 L171,284 L159,284 L153,300 L97,300 Z"
+     d="M90,214 L240,214 L240,350 L189,350 L179,322 L151,322 L141,350 L90,350 Z"
      class="outer"
      id="path14-outer" />
   <text
@@ -404,23 +404,23 @@
      id="text16">BendersBnB</text>
   <!-- Plug-and-play marker (BendersLibrary inserts into BendersBase) -->
   <path
-     d="M153,300 L159,284 L171,284 L177,300"
+     d="M141,350 L151,322 L179,322 L189,350"
      class="outer"
      id="path16" />
   <path
-     d="M153,302 L159,286 L171,286 L177,302"
+     d="M139,350 L150,320 L180,320 L191,350"
      class="iface-line"
      id="path17" />
   <path
-     d="M151,304 L157,288 L173,288 L179,304"
+     d="M137,350 L148,318 L182,318 L193,350"
      class="iface-line"
      id="path18" />
   <path
-     d="M149,306 L155,290 L175,290 L181,306"
+     d="M135,350 L146,316 L184,316 L195,350"
      class="iface-line"
      id="path19" />
   <path
-     d="M165,346 L165,320"
+     d="M165,390 L165,340"
      stroke="#475569"
      stroke-width="1.1"
      stroke-dasharray="4 3"
@@ -428,68 +428,68 @@
      marker-end="url(#arrow)"
      id="path20" />
   <path
-     d="M97,336 L153,336 L159,320 L171,320 L177,336 L233,336 L233,424 L97,424 Z"
+     d="M90,380 L141,380 L151,352 L179,352 L189,380 L240,380 L240,498 L90,498 Z"
      class="ext"
      id="path21" />
   <path
-     d="M97,336 L153,336 L159,320 L171,320 L177,336 L233,336 L233,424 L97,424 Z"
+     d="M90,380 L141,380 L151,352 L179,352 L189,380 L240,380 L240,498 L90,498 Z"
      class="outer"
      id="path21-outer" />
   <text
      x="165"
-     y="360"
+     y="404"
      text-anchor="middle"
      class="box-title"
      id="text21">BendersLibrary.jl</text>
   <rect
-     x="111"
-     y="372"
-     width="108"
-     height="24"
-     rx="6"
-     class="box"
-     id="rect21" />
+      x="111"
+      y="416"
+      width="108"
+      height="24"
+      rx="6"
+      class="box"
+      id="rect21" />
   <text
-     x="165"
-     y="388"
-     text-anchor="middle"
-     class="box-text"
-     id="text22">BendersSeqInOut</text>
+      x="165"
+      y="432"
+      text-anchor="middle"
+      class="box-text"
+      id="text22">BendersSeqInOut</text>
   <!-- BendersBase foundation block -->
   <path
-     d="M268,520 L782,520 L782,596 L754,606 L754,634 L782,644 L782,720 L268,720 Z"
+     d="M268,480 L782,480 L782,556 L754,566 L754,594 L782,604 L782,680 L268,680 Z"
      class="base"
      id="path22" />
   <path
-     d="M782,594 L752,605 L752,635 L782,646"
+     d="M782,554 L752,565 L752,595 L782,606"
      class="iface-line"
      id="path24-4-5"
      style="fill:none;stroke:#5bb8f2;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
   <path
-     d="M782,592 L750,603 L750,637 L782,648"
+     d="M782,552 L750,563 L750,597 L782,608"
      class="iface-line"
      id="path24-4-2"
      style="fill:none;stroke:#5bb8f2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
   <path
-     d="M782,590 L748,601 L748,639 L782,650"
+     d="M782,550 L748,561 L748,599 L782,610"
      class="iface-line"
      id="path24-4-3" />
   <path
-     d="M268,520 L782,520 L782,596 L754,606 L754,634 L782,644 L782,720 L268,720 Z"
+     d="M268,480 L782,480 L782,556 L754,566 L754,594 L782,604 L782,680 L268,680 Z"
      class="outer"
      id="path23" />
   <path
-     d="M782,596 L754,606 L754,634 L782,644"
+     d="M782,556 L754,566 L754,594 L782,604"
      class="outer"
      id="path24" />
   <text
      x="285"
-     y="540"
+     y="500"
      class="cluster-title"
      id="text25">BendersBase.jl</text>
   <rect
      x="323.04761"
-     y="568.62067"
+     y="528.62067"
      width="211.01707"
      height="124.41034"
      rx="8.4406834"
@@ -497,13 +497,13 @@
      id="rect25" />
   <text
      x="423"
-     y="584"
+     y="544"
      text-anchor="middle"
      class="box-title"
      id="text26">General TypicalOracle</text>
   <rect
      x="371.55557"
-     y="605.85895"
+     y="565.85895"
      width="104.82143"
      height="22.282108"
      rx="3.0530515"
@@ -511,13 +511,13 @@
      id="rect26" />
   <text
      x="423"
-     y="621"
+     y="581"
      text-anchor="middle"
      class="box-text"
      id="text27">ClassicalOracle</text>
   <rect
      x="372.04193"
-     y="633.86218"
+     y="593.86218"
      width="106.74756"
      height="22.27565"
      rx="3.1091523"
@@ -525,13 +525,13 @@
      id="rect27" />
   <text
      x="423"
-     y="649"
+     y="609"
      text-anchor="middle"
      class="box-text"
      id="text28">ParetoOracle</text>
   <rect
      x="372.52591"
-     y="661.86298"
+     y="621.86298"
      width="107.2291"
      height="22.274042"
      rx="3.1231778"
@@ -539,13 +539,13 @@
      id="rect28" />
   <text
      x="423"
-     y="677"
+     y="637"
      text-anchor="middle"
      class="box-text"
      id="text29">UnifiedOracle</text>
   <rect
      x="568.27881"
-     y="568.13275"
+     y="528.13275"
      width="146.82434"
      height="125.86928"
      rx="8.1569071"
@@ -553,13 +553,13 @@
      id="rect29" />
   <text
      x="648.2135"
-     y="584.96631"
+     y="544.96631"
      text-anchor="middle"
      class="box-title"
      id="text30">SeparableOracle</text>
   <rect
      x="596.06085"
-     y="620.15076"
+     y="580.15076"
      width="101.88952"
      height="31.271542"
      rx="7.4101467"
@@ -567,21 +567,21 @@
      id="rect30" />
   <text
      x="645.79779"
-     y="638.82019"
+     y="598.82019"
      text-anchor="middle"
      class="box-text"
      id="text31">TypicalOracle</text>
   <!-- BendersLibrary extension block -->
   <path
-     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L812,634 L812,606 L840,596 Z"
+     d="M820,480 L1180,480 L1180,680 L820,680 L820,604 L792,594 L792,566 L820,556 Z"
      class="ext"
      id="path31" />
   <path
-     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L812,634 L812,606 L840,596 Z"
+     d="M820,480 L1180,480 L1180,680 L820,680 L820,604 L792,594 L792,566 L820,556 Z"
      class="outer"
      id="path32" />
   <path
-     d="m 823.10112,546.07865 h -36"
+     d="m 803.10112,506.07865 h -16"
      stroke="#475569"
      stroke-width="1.1"
      stroke-dasharray="4, 3"
@@ -589,21 +589,21 @@
      marker-end="url(#arrow)"
      id="path35" />
   <text
-     x="865"
-     y="540"
+     x="845"
+     y="500"
      class="cluster-title"
      id="text35">BendersLibrary.jl</text>
   <rect
-     x="888"
-     y="560"
+     x="868"
+     y="520"
      width="136"
      height="146"
      rx="8"
      class="box"
      id="rect35" />
   <rect
-     x="892.2865"
-     y="672.74719"
+     x="872.2865"
+     y="632.74719"
      width="130"
      height="22"
      rx="6"
@@ -611,58 +611,58 @@
      id="rect37-3"
      style="fill:#ffffff;stroke:#334155;stroke-width:1" />
   <text
-     x="956"
-     y="588"
+     x="936"
+     y="548"
      text-anchor="middle"
      class="box-title"
      id="text36">Problem-specific</text>
   <text
-     x="956"
-     y="606"
+     x="936"
+     y="566"
      text-anchor="middle"
      class="box-title"
      id="text37">TypicalOracle</text>
   <rect
-     x="891"
-     y="618"
+     x="871"
+     y="578"
      width="130"
      height="22"
      rx="6"
      class="box"
      id="rect37" />
   <text
-     x="956"
-     y="633"
+     x="936"
+     y="593"
      text-anchor="middle"
      class="label"
      style="font-size:10px;"
      id="text38">CFLPknapsckoracle</text>
   <rect
-     x="891"
-     y="646"
+     x="871"
+     y="606"
      width="130"
      height="22"
      rx="6"
      class="box"
      id="rect38" />
   <text
-     x="956"
-     y="661"
+     x="936"
+     y="621"
      text-anchor="middle"
      class="label"
      style="font-size:10px;"
      id="text39">UFLPknapsackoracle</text>
   <rect
-     x="1059"
-     y="560"
+     x="1039"
+     y="520"
      width="136"
      height="146"
      rx="8"
      class="box"
      id="rect39" />
   <rect
-     x="1095.5205"
-     y="639.79022"
+     x="1075.5205"
+     y="599.79022"
      width="70.295944"
      height="33.74538"
      rx="6.4746265"
@@ -670,41 +670,41 @@
      id="rect40-2"
      style="fill:#ffffff;stroke:#334155;stroke-width:0.906304" />
   <text
-     x="1127"
-     y="588"
+     x="1107"
+     y="548"
      text-anchor="middle"
      class="box-title"
      id="text40">DisjunctiveOracle</text>
   <rect
-     x="1092.8184"
-     y="599.79584"
+     x="1072.8184"
+     y="559.79584"
      width="70.295944"
      height="33.74538"
      rx="6.4746265"
      class="box"
      id="rect40" />
   <text
-     x="1128.9326"
-     y="619.9101"
+     x="1108.9326"
+     y="579.9101"
      text-anchor="middle"
      class="box-text"
      id="text41">SplitOracle</text>
   <!-- Zoom connectors from Loop Strategy to left variants -->
   <path
-     d="M431,274 L233,214"
+     d="M431,274 L240,214"
      class="zoom-line"
      id="path41" />
   <path
-     d="M431,354 L233,424"
+     d="M431,354 L240,498"
      class="zoom-line"
      id="path42" />
   <!-- Zoom connectors from Oracle to implementation blocks -->
   <path
-     d="M622,443 L268,520"
+     d="M622,443 L268,480"
      class="zoom-line"
      id="path43" />
   <path
-     d="M818,443 L1200,520"
+     d="M818,443 L1180,480"
      class="zoom-line"
      id="path44" />
   <!-- Plug-and-play principle band -->
@@ -767,21 +767,21 @@
   <text
      xml:space="preserve"
      style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
-     x="1099.1573"
-     y="661.427"
+     x="1079.1573"
+     y="621.427"
      id="text52"><tspan
        sodipodi:role="line"
        id="tspan52"
-       x="1099.1573"
-       y="661.427">otheroracle</tspan></text>
+       x="1079.1573"
+       y="621.427">otheroracle</tspan></text>
   <text
      xml:space="preserve"
      style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
-     x="902.51685"
-     y="687.51685"
+     x="882.51685"
+     y="647.51685"
      id="text53"><tspan
        sodipodi:role="line"
        id="tspan53"
-       x="902.51685"
-       y="687.51685">Other oracle</tspan></text>
+       x="882.51685"
+       y="647.51685">Other oracle</tspan></text>
 </svg>
