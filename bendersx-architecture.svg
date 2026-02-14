@@ -1,42 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
-  <defs>
-    <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1400"
+   height="860"
+   viewBox="0 0 1400 860"
+   version="1.1"
+   id="svg50"
+   sodipodi:docname="bendersx-architecture.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview50"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0697674"
+     inkscape:cx="700.07865"
+     inkscape:cy="430"
+     inkscape:window-width="3840"
+     inkscape:window-height="2036"
+     inkscape:window-x="-12"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg50" />
+  <defs
+     id="defs1">
+    <rect
+       x="1113.6517"
+       y="615.52809"
+       width="6.2808989"
+       height="22.224719"
+       id="rect51" />
+    <style
+       id="style1">
       .title {
-        font-family: "Helvetica", Arial, sans-serif;
+        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
         font-size: 14px;
         font-weight: 700;
         fill: #0F172A;
       }
 
       .subtitle {
-        font-family: "Helvetica", Arial, sans-serif;
+        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
         font-size: 11px;
         fill: #475569;
       }
 
       .cluster-title {
-        font-family: "Helvetica", Arial, sans-serif;
+        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
         font-size: 12px;
         font-weight: 700;
         fill: #0F172A;
       }
 
       .box-title {
-        font-family: "Helvetica", Arial, sans-serif;
+        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
         font-size: 11px;
         font-weight: 700;
         fill: #0F172A;
       }
 
       .box-text {
-        font-family: "Helvetica", Arial, sans-serif;
+        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
         font-size: 9.5px;
         fill: #1F2937;
       }
 
       .label {
-        font-family: "Helvetica", Arial, sans-serif;
+        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
         font-size: 8.5px;
         fill: #334155;
       }
@@ -115,142 +152,629 @@
         stroke-linejoin: round;
       }
     </style>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L8,3 L0,6 Z" fill="#475569" />
+    <marker
+       id="arrow"
+       markerWidth="8"
+       markerHeight="8"
+       refX="8"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L8,3 L0,6 Z"
+         fill="#475569"
+         id="path1" />
     </marker>
   </defs>
-
-  <rect x="0" y="0" width="1400" height="860" fill="#FFFFFF" />
-
-  <text x="700" y="44" text-anchor="middle" class="title">BendersX Architecture</text>
-  <text x="700" y="68" text-anchor="middle" class="subtitle">BendersBase provides the core workflow; BendersLibrary
-    plugs in extensions</text>
-
+  <rect
+     x="0"
+     y="74.887642"
+     width="1321.7303"
+     height="785.11237"
+     fill="#ffffff"
+     id="rect1"
+     style="stroke-width:0.928376" />
+  <text
+     x="657.48315"
+     y="95.213486"
+     text-anchor="middle"
+     class="title"
+     id="text1">BendersX.jl Architecture</text>
+  <text
+     x="685.98877"
+     y="124.04494"
+     text-anchor="middle"
+     class="subtitle"
+     id="text2">BendersBase provides the core workflow; BendersLibrary plugs in extensions</text>
   <!-- Outer environment -->
-  <rect x="60" y="86" width="1280" height="760" rx="24" class="outer" />
-  <text x="90" y="120" class="cluster-title">Environment</text>
-
+  <rect
+     x="59.964294"
+     y="145.8744"
+     width="1214.8467"
+     height="700.16132"
+     rx="22.778376"
+     class="outer"
+     id="rect2" />
   <!-- Core loop (runtime view) -->
-  <rect x="370" y="166" width="580" height="294" rx="36" class="loop" />
-
-  <rect x="630" y="191" width="180" height="62" rx="10" class="box" />
-  <text x="720" y="216" text-anchor="middle" class="box-title">Master</text>
-  <text x="720" y="238" text-anchor="middle" class="box-text">core model</text>
-
-  <rect x="439" y="282" width="132" height="64" rx="10" class="box" />
-  <text x="505" y="302" text-anchor="middle" class="box-title">Loop Strategy</text>
-  <text x="505" y="324" text-anchor="middle" class="box-text">control and schedule</text>
-  <rect x="431" y="274" width="148" height="80" rx="12" class="zoom-focus" />
-
-  <rect x="630" y="373" width="180" height="62" rx="10" class="box" style="stroke-width:1.3" />
-  <text x="720" y="398" text-anchor="middle" class="box-title">Oracle</text>
-  <text x="720" y="420" text-anchor="middle" class="box-text">separation and cuts</text>
-  <rect x="622" y="365" width="196" height="78" rx="12" class="zoom-focus" />
-
-  <circle cx="813" cy="385" r="7" fill="none" stroke="#334155" stroke-width="1.1" />
-  <path d="M818,390 L824,396" stroke="#334155" stroke-width="1.1" fill="none" />
-
-  <rect x="1040" y="261" width="120" height="82" rx="10" class="box" />
-  <text x="1100" y="278" text-anchor="middle" class="box-title">Log</text>
-  <text x="1100" y="301" text-anchor="middle" class="box-text">observer</text>
-  <ellipse cx="1100" cy="322" rx="13" ry="7" fill="none" stroke="#334155" stroke-width="1.1" />
-  <circle cx="1100" cy="322" r="2.5" fill="#475569" />
-
+  <rect
+     x="398.97205"
+     y="174.19679"
+     width="565.05591"
+     height="281.95483"
+     rx="35.072433"
+     class="loop"
+     id="rect3" />
+  <text
+     x="427.12695"
+     y="208.58984"
+     class="cluster-title"
+     id="text3-1"
+     style="font-weight:700;font-size:12px;font-family:Helvetica, Arial, sans-serif;fill:#0f172a">Environment</text>
+  <rect
+     x="655.03589"
+     y="194.77748"
+     width="132.3439"
+     height="57.343903"
+     rx="7.3524389"
+     class="box"
+     id="rect4" />
+  <text
+     x="720"
+     y="216"
+     text-anchor="middle"
+     class="box-title"
+     id="text4">Master</text>
+  <text
+     x="720"
+     y="238"
+     text-anchor="middle"
+     class="box-text"
+     id="text5">core model</text>
+  <rect
+     x="452.94754"
+     y="281.93631"
+     width="118.11613"
+     height="54.464439"
+     rx="8.9481916"
+     class="box"
+     id="rect5" />
+  <text
+     x="505"
+     y="302"
+     text-anchor="middle"
+     class="box-title"
+     id="text6">Loop Strategy</text>
+  <text
+     x="505"
+     y="324"
+     text-anchor="middle"
+     class="box-text"
+     id="text7">control and schedule</text>
+  <rect
+     x="431"
+     y="274"
+     width="148"
+     height="80"
+     rx="12"
+     class="zoom-focus"
+     id="rect7" />
+  <rect
+     x="653.05487"
+     y="380.59418"
+     width="144.51947"
+     height="48.261047"
+     rx="8.0288601"
+     class="box"
+     style="stroke-width:1.02772"
+     id="rect8" />
+  <text
+     x="720"
+     y="398"
+     text-anchor="middle"
+     class="box-title"
+     id="text8">Oracle</text>
+  <text
+     x="720"
+     y="420"
+     text-anchor="middle"
+     class="box-text"
+     id="text9">separation and cuts</text>
+  <rect
+     x="622"
+     y="365"
+     width="196"
+     height="78"
+     rx="12"
+     class="zoom-focus"
+     id="rect9" />
+  <circle
+     cx="813"
+     cy="385"
+     r="7"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1.1"
+     id="circle9" />
+  <path
+     d="M818,390 L824,396"
+     stroke="#334155"
+     stroke-width="1.1"
+     fill="none"
+     id="path9" />
+  <rect
+     x="1040"
+     y="261"
+     width="120"
+     height="82"
+     rx="10"
+     class="box"
+     id="rect10" />
+  <text
+     x="1100"
+     y="278"
+     text-anchor="middle"
+     class="box-title"
+     id="text10">Logger</text>
+  <text
+     x="1100"
+     y="301"
+     text-anchor="middle"
+     class="box-text"
+     id="text11">observer</text>
+  <ellipse
+     cx="1100"
+     cy="322"
+     rx="13"
+     ry="7"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1.1"
+     id="ellipse11" />
+  <circle
+     cx="1100"
+     cy="322"
+     r="2.5"
+     fill="#475569"
+     id="circle11" />
   <!-- Core arrows -->
-  <path d="M706,253 L706,373" class="arrow" />
-  <text x="625" y="318" class="label">candidate solution</text>
-
-  <path d="M734,373 L734,253" class="arrow" />
-  <text x="744" y="318" class="label">cut</text>
-
-  <path d="M571,314 C615,306 660,306 706,314" class="arrow-dashed" />
-
+  <path
+     d="M706,253 L706,373"
+     class="arrow"
+     id="path11" />
+  <text
+     x="625"
+     y="318"
+     class="label"
+     id="text12">candidate solution</text>
+  <path
+     d="M734,373 L734,253"
+     class="arrow"
+     id="path12" />
+  <text
+     x="744"
+     y="318"
+     class="label"
+     id="text13">cut</text>
+  <path
+     d="M571,314 C615,306 660,306 706,314"
+     class="arrow-dashed"
+     id="path13" />
   <!-- Environment variants (outside loop, left side) -->
-  <path d="M97,214 L233,214 L233,300 L177,300 L171,316 L159,316 L153,300 L97,300 Z" class="base" />
-  <text x="165" y="238" text-anchor="middle" class="box-title">BendersBase</text>
-  <rect x="111" y="250" width="108" height="24" rx="6" class="box" />
-  <text x="165" y="266" text-anchor="middle" class="box-text">BendersSeq</text>
-  <rect x="111" y="280" width="108" height="24" rx="6" class="box" />
-  <text x="165" y="296" text-anchor="middle" class="box-text">BendersBnB</text>
-
+  <path
+     d="M97,214 L233,214 L233,300 L177,300 L171,316 L159,316 L153,300 L97,300 Z"
+     class="base"
+     id="path14" />
+  <text
+     x="165"
+     y="238"
+     text-anchor="middle"
+     class="box-title"
+     id="text14">BendersBase.jl</text>
+  <rect
+     x="111"
+     y="250"
+     width="108"
+     height="24"
+     rx="6"
+     class="box"
+     id="rect14" />
+  <text
+     x="165"
+     y="266"
+     text-anchor="middle"
+     class="box-text"
+     id="text15">BendersSeq</text>
+  <rect
+     x="111"
+     y="280"
+     width="108"
+     height="24"
+     rx="6"
+     class="box"
+     id="rect15" />
+  <text
+     x="165"
+     y="296"
+     text-anchor="middle"
+     class="box-text"
+     id="text16">BendersBnB</text>
   <!-- Plug-and-play marker (BendersLibrary inserts into BendersBase) -->
-  <path d="M177,300 L171,316 L159,316 L153,300" class="iface-line" />
-  <path d="M175,302 L169,314 L161,314 L155,302" class="iface-line" />
-  <path d="M153,336 L159,316 L171,316 L177,336" class="iface-line" />
-  <path d="M155,334 L161,318 L169,318 L175,334" class="iface-line" />
-  <path d="M165,346 L165,320" stroke="#475569" stroke-width="1.1" stroke-dasharray="4 3" fill="none"
-    marker-end="url(#arrow)" />
-
-  <path d="M97,336 L153,336 L159,316 L171,316 L177,336 L233,336 L233,424 L97,424 Z" class="ext" />
-  <text x="165" y="360" text-anchor="middle" class="box-title">BendersLibrary</text>
-  <rect x="111" y="372" width="108" height="24" rx="6" class="box" />
-  <text x="165" y="388" text-anchor="middle" class="box-text">BendersSeqInOut</text>
-
+  <path
+     d="M177,300 L171,316 L159,316 L153,300"
+     class="iface-line"
+     id="path16" />
+  <path
+     d="M175,302 L169,314 L161,314 L155,302"
+     class="iface-line"
+     id="path17" />
+  <path
+     d="M153,336 L159,316 L171,316 L177,336"
+     class="iface-line"
+     id="path18" />
+  <path
+     d="M155,334 L161,318 L169,318 L175,334"
+     class="iface-line"
+     id="path19" />
+  <path
+     d="M165,346 L165,320"
+     stroke="#475569"
+     stroke-width="1.1"
+     stroke-dasharray="4 3"
+     fill="none"
+     marker-end="url(#arrow)"
+     id="path20" />
+  <path
+     d="M97,336 L153,336 L159,316 L171,316 L177,336 L233,336 L233,424 L97,424 Z"
+     class="ext"
+     id="path21" />
+  <text
+     x="165"
+     y="360"
+     text-anchor="middle"
+     class="box-title"
+     id="text21">BendersLibrary.jl</text>
+  <rect
+     x="111"
+     y="372"
+     width="108"
+     height="24"
+     rx="6"
+     class="box"
+     id="rect21" />
+  <text
+     x="165"
+     y="388"
+     text-anchor="middle"
+     class="box-text"
+     id="text22">BendersSeqInOut</text>
   <!-- BendersBase foundation block -->
-  <path d="M268,520 L782,520 L782,596 L756,606 L756,634 L782,644 L782,720 L268,720 Z" class="base" />
-  <path d="M268,520 L782,520 L782,596 L756,606 L756,634 L782,644 L782,720 L268,720 Z" class="outer" />
-  <path d="M782,596 L756,606 L756,634 L782,644" class="iface-line" />
-  <path d="M778,600 L760,608 L760,632 L778,640" class="iface-line" />
-  <text x="285" y="540" class="cluster-title">BendersBase (Foundation)</text>
-
-  <rect x="298" y="560" width="250" height="146" rx="10" class="box" />
-  <text x="423" y="584" text-anchor="middle" class="box-title">TypicalOracle</text>
-  <rect x="320" y="606" width="206" height="22" rx="6" class="box" />
-  <text x="423" y="621" text-anchor="middle" class="box-text">ClassicalOracle</text>
-  <rect x="320" y="634" width="206" height="22" rx="6" class="box" />
-  <text x="423" y="649" text-anchor="middle" class="box-text">ParetoOracle</text>
-  <rect x="320" y="662" width="206" height="22" rx="6" class="box" />
-  <text x="423" y="677" text-anchor="middle" class="box-text">UnifiedOracle</text>
-
-  <rect x="593" y="560" width="180" height="146" rx="10" class="box" />
-  <text x="683" y="584" text-anchor="middle" class="box-title">SeparableOracle</text>
-  <rect x="628" y="626" width="110" height="36" rx="8" class="box" />
-  <text x="683" y="648" text-anchor="middle" class="box-text">TypicalOracle</text>
-
+  <path
+     d="M268,520 L782,520 L782,596 L756,606 L756,634 L782,644 L782,720 L268,720 Z"
+     class="base"
+     id="path22" />
+  <path
+     d="m 783.07792,589.76477 -32.06597,11.96833 v 33.51132 l 32.06597,11.96833"
+     class="iface-line"
+     id="path24-4-5"
+     style="fill:none;stroke:#5bb8f2;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 782.11777,592.7474 -28.7861,11.18437 V 635.248 l 28.7861,11.18437"
+     class="iface-line"
+     id="path24-4-2"
+     style="fill:none;stroke:#5bb8f2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M268,520 L782,520 L782,596 L756,606 L756,634 L782,644 L782,720 L268,720 Z"
+     class="outer"
+     id="path23" />
+  <path
+     d="M782,596 L756,606 L756,634 L782,644"
+     class="iface-line"
+     id="path24" />
+  <text
+     x="285"
+     y="540"
+     class="cluster-title"
+     id="text25">BendersBase.jl</text>
+  <rect
+     x="323.04761"
+     y="568.62067"
+     width="211.01707"
+     height="124.41034"
+     rx="8.4406834"
+     class="box"
+     id="rect25" />
+  <text
+     x="423"
+     y="584"
+     text-anchor="middle"
+     class="box-title"
+     id="text26">TypicalOracle</text>
+  <rect
+     x="371.55557"
+     y="605.85895"
+     width="104.82143"
+     height="22.282108"
+     rx="3.0530515"
+     class="box"
+     id="rect26" />
+  <text
+     x="423"
+     y="621"
+     text-anchor="middle"
+     class="box-text"
+     id="text27">ClassicalOracle</text>
+  <rect
+     x="372.04193"
+     y="633.86218"
+     width="106.74756"
+     height="22.27565"
+     rx="3.1091523"
+     class="box"
+     id="rect27" />
+  <text
+     x="423"
+     y="649"
+     text-anchor="middle"
+     class="box-text"
+     id="text28">ParetoOracle</text>
+  <rect
+     x="372.52591"
+     y="661.86298"
+     width="107.2291"
+     height="22.274042"
+     rx="3.1231778"
+     class="box"
+     id="rect28" />
+  <text
+     x="423"
+     y="677"
+     text-anchor="middle"
+     class="box-text"
+     id="text29">UnifiedOracle</text>
+  <rect
+     x="568.27881"
+     y="568.13275"
+     width="146.82434"
+     height="125.86928"
+     rx="8.1569071"
+     class="box"
+     id="rect29" />
+  <text
+     x="648.2135"
+     y="584.96631"
+     text-anchor="middle"
+     class="box-title"
+     id="text30">SeparableOracle</text>
+  <rect
+     x="596.06085"
+     y="620.15076"
+     width="101.88952"
+     height="31.271542"
+     rx="7.4101467"
+     class="box"
+     id="rect30" />
+  <text
+     x="645.79779"
+     y="638.82019"
+     text-anchor="middle"
+     class="box-text"
+     id="text31">TypicalOracle</text>
   <!-- BendersLibrary extension block -->
-  <path d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L822,634 L812,620 L822,606 L840,596 Z" class="ext" />
-  <path d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L822,634 L812,620 L822,606 L840,596 Z" class="outer" />
-  <path d="M840,596 L822,606 L812,620 L822,634 L840,644" class="iface-line" />
-  <path d="M840,600 L824,608 L816,620 L824,632 L840,640" class="iface-line" />
-  <path d="M826,620 L790,620" stroke="#475569" stroke-width="1.1" stroke-dasharray="4 3" fill="none"
-    marker-end="url(#arrow)" />
-  <text x="865" y="540" class="cluster-title">BendersLibrary</text>
-
-  <rect x="888" y="560" width="136" height="146" rx="8" class="box" />
-  <text x="956" y="588" text-anchor="middle" class="box-title">Problem-specific</text>
-  <text x="956" y="606" text-anchor="middle" class="box-title">Oracle</text>
-  <rect x="891" y="618" width="130" height="22" rx="6" class="box" />
-  <text x="956" y="633" text-anchor="middle" class="label" style="font-size:10px;">CFLPknapsckoracle</text>
-  <rect x="891" y="646" width="130" height="22" rx="6" class="box" />
-  <text x="956" y="661" text-anchor="middle" class="label" style="font-size:10px;">UFLPknapsackoracle</text>
-
-  <rect x="1059" y="560" width="136" height="146" rx="8" class="box" />
-  <text x="1127" y="588" text-anchor="middle" class="box-title">DisjunctiveOracle</text>
-  <rect x="1089" y="624" width="76" height="38" rx="7" class="box" />
-  <text x="1127" y="646" text-anchor="middle" class="box-text">SplitOracle</text>
-
+  <path
+     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L822,634 L812,620 L822,606 L840,596 Z"
+     class="ext"
+     id="path31" />
+  <path
+     d="M840,520 L1200,520 L1200,720 L840,720 L840,644 L822,634 L812,620 L822,606 L840,596 Z"
+     class="outer"
+     id="path32" />
+  <path
+     d="m 839.48877,596.14045 -26,10 v 28 l 26,10"
+     class="iface-line"
+     id="path24-4"
+     style="fill:none;stroke:#5bb8f2;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 823.10112,546.07865 h -36"
+     stroke="#475569"
+     stroke-width="1.1"
+     stroke-dasharray="4, 3"
+     fill="none"
+     marker-end="url(#arrow)"
+     id="path35" />
+  <text
+     x="865"
+     y="540"
+     class="cluster-title"
+     id="text35">BendersLibrary.jl</text>
+  <rect
+     x="888"
+     y="560"
+     width="136"
+     height="146"
+     rx="8"
+     class="box"
+     id="rect35" />
+  <rect
+     x="892.2865"
+     y="672.74719"
+     width="130"
+     height="22"
+     rx="6"
+     class="box"
+     id="rect37-3"
+     style="fill:#ffffff;stroke:#334155;stroke-width:1" />
+  <text
+     x="956"
+     y="588"
+     text-anchor="middle"
+     class="box-title"
+     id="text36">Problem-specific</text>
+  <text
+     x="956"
+     y="606"
+     text-anchor="middle"
+     class="box-title"
+     id="text37">Oracle</text>
+  <rect
+     x="891"
+     y="618"
+     width="130"
+     height="22"
+     rx="6"
+     class="box"
+     id="rect37" />
+  <text
+     x="956"
+     y="633"
+     text-anchor="middle"
+     class="label"
+     style="font-size:10px;"
+     id="text38">CFLPknapsckoracle</text>
+  <rect
+     x="891"
+     y="646"
+     width="130"
+     height="22"
+     rx="6"
+     class="box"
+     id="rect38" />
+  <text
+     x="956"
+     y="661"
+     text-anchor="middle"
+     class="label"
+     style="font-size:10px;"
+     id="text39">UFLPknapsackoracle</text>
+  <rect
+     x="1059"
+     y="560"
+     width="136"
+     height="146"
+     rx="8"
+     class="box"
+     id="rect39" />
+  <rect
+     x="1095.5205"
+     y="639.79022"
+     width="70.295944"
+     height="33.74538"
+     rx="6.4746265"
+     class="box"
+     id="rect40-2"
+     style="fill:#ffffff;stroke:#334155;stroke-width:0.906304" />
+  <text
+     x="1127"
+     y="588"
+     text-anchor="middle"
+     class="box-title"
+     id="text40">DisjunctiveOracle</text>
+  <rect
+     x="1092.8184"
+     y="599.79584"
+     width="70.295944"
+     height="33.74538"
+     rx="6.4746265"
+     class="box"
+     id="rect40" />
+  <text
+     x="1128.9326"
+     y="619.9101"
+     text-anchor="middle"
+     class="box-text"
+     id="text41">SplitOracle</text>
   <!-- Zoom connectors from Loop Strategy to left variants -->
-  <path d="M431,274 L233,214" class="zoom-line" />
-  <path d="M431,354 L233,424" class="zoom-line" />
-
+  <path
+     d="M431,274 L233,214"
+     class="zoom-line"
+     id="path41" />
+  <path
+     d="M431,354 L233,424"
+     class="zoom-line"
+     id="path42" />
   <!-- Zoom connectors from Oracle to implementation blocks -->
-  <path d="M622,443 L268,520" class="zoom-line" />
-  <path d="M818,443 L1200,520" class="zoom-line" />
-
+  <path
+     d="M622,443 L268,520"
+     class="zoom-line"
+     id="path43" />
+  <path
+     d="M818,443 L1200,520"
+     class="zoom-line"
+     id="path44" />
   <!-- Plug-and-play principle band -->
-  <rect x="170" y="780" width="1060" height="56" rx="10" class="band" />
-
+  <rect
+     x="170"
+     y="780"
+     width="1060"
+     height="56"
+     rx="10"
+     class="band"
+     id="rect44" />
   <!-- Plug-and-slot legend -->
-  <g transform="translate(205,786)">
-    <path d="M0,8 L78,8 L78,18 L66,22 L66,26 L78,30 L78,40 L0,40 Z" fill="#EAF2FF" stroke="#334155" stroke-width="1.0" />
-    <path d="M78,18 L66,22 L66,26 L78,30" class="iface-line" />
-    <path d="M75,19 L68,22.5 L68,25.5 L75,29" class="iface-line" />
-    <path d="M94,11 L142,11 L142,37 L94,37 L94,31 L86,27 L82,24 L86,21 L94,17 Z" fill="#E9F7EF" stroke="#334155" stroke-width="1.0" />
-    <path d="M94,17 L86,21 L82,24 L86,27 L94,31" class="iface-line" />
-    <path d="M90,24 L74,24" stroke="#475569" stroke-width="1.1" stroke-dasharray="4 3" fill="none"
-      marker-end="url(#arrow)" />
+  <g
+     transform="rotate(-0.42903814,105268.69,-27088.1)"
+     id="g50">
+    <path
+       d="m 0,8 h 78 v 10 l -12,4 v 4 l 12,4 V 40 H 0 Z"
+       fill="#eaf2ff"
+       stroke="#334155"
+       stroke-width="1"
+       id="path45" />
+    <path
+       d="m 78,18 -12,4 v 4 l 12,4"
+       class="iface-line"
+       id="path46" />
+    <path
+       d="m 75,19 -7,3.5 v 3 l 7,3.5"
+       class="iface-line"
+       id="path47" />
+    <path
+       d="m 94,11 h 48 V 37 H 94 v -6 l -8,-4 -4,-3 4,-3 8,-4 z"
+       fill="#e9f7ef"
+       stroke="#334155"
+       stroke-width="1"
+       id="path48" />
+    <path
+       d="m 94,17 -8,4 -4,3 4,3 8,4"
+       class="iface-line"
+       id="path49" />
+    <path
+       d="M 90,24 H 74"
+       stroke="#475569"
+       stroke-width="1.1"
+       stroke-dasharray="4, 3"
+       fill="none"
+       marker-end="url(#arrow)"
+       id="path50" />
   </g>
-
-  <text x="720" y="814" text-anchor="middle" class="box-text">Plug-and-play extension: BendersBase stays stable while
+  <text
+     x="720"
+     y="814"
+     text-anchor="middle"
+     class="box-text"
+     id="text50">Plug-and-play extension: BendersBase stays stable while
     BendersLibrary attaches interchangeable modules.</text>
+  <text
+     xml:space="preserve"
+     id="text51"
+     style="fill:#1a1a1a;text-orientation:auto;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect51)" />
+  <text
+     xml:space="preserve"
+     style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
+     x="1099.1573"
+     y="661.427"
+     id="text52"><tspan
+       sodipodi:role="line"
+       id="tspan52"
+       x="1099.1573"
+       y="661.427">otheroracle</tspan></text>
+  <text
+     xml:space="preserve"
+     style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
+     x="902.51685"
+     y="687.51685"
+     id="text53"><tspan
+       sodipodi:role="line"
+       id="tspan53"
+       x="902.51685"
+       y="687.51685">Other oracle</tspan></text>
 </svg>
