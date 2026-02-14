@@ -40,41 +40,41 @@
     <style
        id="style1">
       .title {
-        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 14px;
+        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
+        font-size: 15px;
         font-weight: 700;
         fill: #0F172A;
       }
 
       .subtitle {
-        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 11px;
+        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
+        font-size: 11.5px;
         fill: #475569;
       }
 
       .cluster-title {
-        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 12px;
+        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
+        font-size: 12.5px;
         font-weight: 700;
         fill: #0F172A;
       }
 
       .box-title {
-        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 11px;
+        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
+        font-size: 11.2px;
         font-weight: 700;
         fill: #0F172A;
       }
 
       .box-text {
-        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 9.5px;
+        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
+        font-size: 10px;
         fill: #1F2937;
       }
 
       .label {
-        font-family: &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 8.5px;
+        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
+        font-size: 9.2px;
         fill: #334155;
       }
 
@@ -205,11 +205,10 @@
      class="loop"
      id="rect3" />
   <text
-     x="427.12695"
-     y="208.58984"
-     class="cluster-title"
-     id="text3-1"
-     style="font-weight:700;font-size:12px;font-family:Helvetica, Arial, sans-serif;fill:#0f172a">Environment</text>
+      x="427.12695"
+      y="208.58984"
+      class="cluster-title"
+      id="text3-1">Environment</text>
   <rect
      x="655.03589"
      y="194.77748"
@@ -752,6 +751,18 @@
        fill="none"
        marker-end="url(#arrow)"
        id="path50" />
+    <text
+       x="52"
+       y="28"
+       text-anchor="middle"
+       class="box-title"
+       id="text54">framework</text>
+    <text
+       x="172"
+       y="28"
+       text-anchor="middle"
+       class="box-title"
+       id="text55">extension</text>
   </g>
   <text
      x="720"
@@ -766,6 +777,7 @@
      style="writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect51);display:inline;fill:#1a1a1a" />
   <text
      xml:space="preserve"
+     class="label"
      style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
      x="1079.1573"
      y="621.427"
@@ -776,6 +788,7 @@
        y="621.427">otheroracle</tspan></text>
   <text
      xml:space="preserve"
+     class="label"
      style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
      x="882.51685"
      y="647.51685"
