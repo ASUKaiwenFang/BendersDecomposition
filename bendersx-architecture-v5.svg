@@ -100,7 +100,7 @@
       /* 3. Interface Layer (The Bridge) */
       .zone-interface {
         fill: #F7FAFD; /* Light cool panel */
-        stroke: #C9D7E4; /* Cool border */
+        stroke: #D4C4B0; /* Warm gray border — harmonizes with Arsenal */
         stroke-width: 1;
         stroke-dasharray: 6 4;
         rx: 12;
@@ -186,7 +186,7 @@
         marker-end: url(#arrow-head);
       }
       .arrow-impl {
-        stroke: #8A98A6; /* Neutral connector */
+        stroke: #B9966E; /* Warm brown — semantic "Arsenal plugs into Engine" */
         stroke-width: 1.5;
         fill: none;
         stroke-dasharray: 5 3;
@@ -195,11 +195,11 @@
         marker-end: url(#arrow-head-muted);
       }
       
-      /* Inner Nodes */
-      .node-inner-blue { fill: #CFE0EF; stroke: #8FAEC4; rx: 4; }
+      /* Inner Nodes — unified amber palette with subtle shade variation */
+      .node-inner-blue { fill: #F2DFC8; stroke: #C79C74; rx: 4; }
       .node-inner-amber { fill: #E9C9A6; stroke: #C79C74; rx: 4; }
-      .node-inner-orange { fill: #E2B894; stroke: #B9855F; rx: 4; }
-      .node-inner-emerald { fill: #CFE1D8; stroke: #8FB2A3; rx: 4; }
+      .node-inner-orange { fill: #E0BFA0; stroke: #B9855F; rx: 4; }
+      .node-inner-emerald { fill: #EDD5BC; stroke: #C79C74; rx: 4; }
 
       /* 6. Utility */
       .highlight-loop {
@@ -233,7 +233,7 @@
        markerUnits="strokeWidth">
       <path
          d="M0,0 L10,3 L0,6 L1.5,3 Z"
-         fill="#8A98A6"
+         fill="#B9966E"
          id="path2" />
     </marker>
   </defs>
@@ -266,8 +266,8 @@
      y="140"
      width="550"
      height="340"
-      fill="#DDEFFD"
-      stroke="#BFD3E8"
+      fill="#D0E4F7"
+      stroke="#A3C4E0"
       stroke-width="1"
       rx="16"
       id="rect-core-interface" />
@@ -765,14 +765,14 @@
      marker-end="none"
      id="path-driver-connector" />
   <!-- Arrowhead manually pointing UP to the interface -->
-   <path d="M 325,470 L 320,480 L 330,480 Z" fill="#8A98A6" />
+   <path d="M 325,470 L 320,480 L 330,480 Z" fill="#B9966E" />
   <!-- G. Legend/Footer -->
   <rect
      x="50"
      y="740"
      width="1300"
      height="40"
-      fill="#F1F4F6"
+       fill="#E2E7ED"
      rx="4"
      id="rect47" />
   <text
