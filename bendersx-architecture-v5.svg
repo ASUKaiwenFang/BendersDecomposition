@@ -129,6 +129,14 @@
         stroke-dasharray: 4 2;
         rx: 8;
       }
+      /* Abstract Env/Driver (Red Theme) to match Strategies */
+      .node-abstract-env {
+        fill: #FFF1F2; /* Rose 50 - Matches Drivers */
+        stroke: #E11D48; /* Rose 600 */
+        stroke-width: 1.5;
+        stroke-dasharray: 4 2;
+        rx: 8;
+      }
       /* Concrete Oracle Implementation: Green Theme */
       .node-concrete {
         fill: #FFFBEB; /* Amber 50 (Warm) or Mint */
@@ -296,7 +304,7 @@
      x="100"
      y="240"
      width="450"
-     height="180"
+     height="230"
      class="node-abstract"
      id="rect7" />
   <text
