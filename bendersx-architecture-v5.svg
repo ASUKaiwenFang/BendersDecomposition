@@ -121,6 +121,14 @@
         stroke-dasharray: 4 2; /* Dashed to imply abstract/interface */
         rx: 8;
       }
+      /* Abstract Oracle (Green Theme) to match Arsenal */
+      .node-abstract-oracle {
+        fill: #F0FDF4; /* Pale Green/Mint - Matches Arsenal */
+        stroke: #10B981; /* Emerald 500 */
+        stroke-width: 1.5;
+        stroke-dasharray: 4 2;
+        rx: 8;
+      }
       /* Concrete Oracle Implementation: Green Theme */
       .node-concrete {
         fill: #FFFBEB; /* Amber 50 (Warm) or Mint */
@@ -332,26 +340,28 @@
      text-anchor="middle"
      class="label-small"
      id="text11">(JuMP Model)</text>
-  <!-- Oracle Slot (Abstract) -->
+  <!-- Oracle Slot (Abstract) - Matches Arsenal Theme (Green) -->
   <rect
      x="380"
      y="320"
      width="140"
      height="80"
-     class="node-abstract"
-     stroke-dasharray="2 2"
+     class="node-abstract-oracle"
+     stroke-dasharray="4 2"
      id="rect11" />
   <text
      x="450"
      y="350"
      text-anchor="middle"
      class="node-header"
+     fill="#065F46"
      id="text12">AbstractOracle</text>
   <text
      x="450"
      y="370"
      text-anchor="middle"
      class="label-small"
+     fill="#047857"
      id="text13">(Socket)</text>
   <!-- Flow within Env (v3 Loop Geometry) -->
   <!-- Master -> Oracle (Candidate) - Route around bottom -->
