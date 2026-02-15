@@ -286,46 +286,46 @@
       fill="#6B7280"
       id="text-core-desc">Abstract Definitions • Interaction Logic</text>
 
-  <!-- Zone 1B: The Engine (Bottom Left) -->
-  <rect
-     x="50"
-     y="500"
-     width="550"
-     height="220"
-     class="zone-engine"
-     id="rect-engine" />
-  <text
-     x="70"
-     y="525"
-     text-anchor="start"
-     class="zone-header"
-     id="text-engine-header">THE ENGINE</text>
-  <text
-     x="70"
-     y="545"
-     text-anchor="start"
-     class="label-small"
-     id="text-engine-desc">Polymorphic Strategies • Loop Control</text>
-  <!-- Zone 2: The Arsenal (BendersLibrary.jl) -->
-  <rect
-     x="650"
-     y="140"
-     width="700"
-     height="580"
-     class="zone-library"
-     id="rect5" />
-  <text
-     x="1000"
-     y="180"
-     text-anchor="middle"
-     class="zone-header"
-     id="text6">THE ARSENAL</text>
-  <text
-     x="1000"
-     y="200"
-     text-anchor="middle"
-     class="label-small"
-     id="text7">Concrete Oracles • Problem-Specific Logic</text>
+   <!-- Zone 1B: The Engine (Bottom Left) -->
+   <rect
+      x="50"
+      y="500"
+      width="550"
+      height="220"
+      class="zone-engine"
+      id="rect-engine" />
+   <text
+      x="325"
+      y="525"
+      text-anchor="middle"
+      class="zone-header"
+      id="text-engine-header">THE ENGINE</text>
+   <text
+      x="325"
+      y="545"
+      text-anchor="middle"
+      class="label-small"
+      id="text-engine-desc">Polymorphic Strategies • Loop Control</text>
+   <!-- Zone 2: The Arsenal (BendersLibrary.jl) -->
+   <rect
+      x="650"
+      y="140"
+      width="700"
+      height="580"
+      class="zone-library"
+      id="rect5" />
+   <text
+      x="1000"
+      y="180"
+      text-anchor="middle"
+      class="zone-header"
+      id="text6">THE ARSENAL</text>
+   <text
+      x="1000"
+      y="200"
+      text-anchor="middle"
+      class="label-small"
+      id="text7">Concrete Oracles • Problem-Specific Logic</text>
   <!-- C. The Engine Interfaces (Abstract Layer) -->
   <!-- C1. Driver Interface (AbstractBendersEnv) -->
   <rect
