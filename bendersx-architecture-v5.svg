@@ -648,8 +648,6 @@
      width="220"
      height="120"
      class="node-concrete"
-     stroke="#8B5CF6"
-     fill="#F5F3FF"
      id="rect39" />
   <text
      x="825"
@@ -693,8 +691,6 @@
      width="220"
      height="100"
      class="node-concrete"
-     stroke="#0EA5E9"
-     fill="#E0F2FE"
      id="rect42" />
   <text
      x="1155"
@@ -720,28 +716,13 @@
      class="label-small"
      id="text44">Parallel / Multi-cut</text>
   <!-- F. Implementation Arrows (The "Plug-in") -->
-  <!-- Top Left (General) -->
+  <!-- Single Connection from Arsenal to Socket -->
   <path
-     d="M 670,300 L 520,330"
+     d="M 650,360 L 520,360"
      class="arrow-impl"
-     id="path44" />
-  <!-- Top Right (Problem-Specific) -->
-  <path
-     d="M 1000,350 L 540,350 L 540,330 L 520,330"
-     class="arrow-impl"
-     id="path45" />
-  <!-- Bottom Left (Advanced) -->
-  <path
-     d="M 670,550 L 630,550 L 630,360 L 520,360"
-     class="arrow-impl"
-     stroke-dasharray="2 2"
-     id="path46" />
-  <!-- Bottom Right (Separable) -->
-  <path
-     d="M 1000,550 L 980,550 L 980,680 L 580,680 L 580,380 L 520,380"
-     class="arrow-impl"
-     stroke-dasharray="2 2"
-     id="path47" />
+     stroke-width="3"
+     stroke-dasharray="8 4"
+     id="path-main-connector" />
   <!-- G. Legend/Footer -->
   <rect
      x="50"
