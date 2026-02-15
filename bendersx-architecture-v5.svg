@@ -101,7 +101,7 @@
       .zone-interface {
         fill: #F7FAFD; /* Light cool panel */
         stroke: #BFA78B; /* Print-safe panel border */
-        stroke-width: 1;
+        stroke-width: 1.2;
         stroke-dasharray: 6 4;
         rx: 12;
       }
@@ -118,7 +118,7 @@
       .node-abstract {
         fill: #EEF4FA; /* Cool neutral */
         stroke: #9CB5C8; /* Cool muted */
-        stroke-width: 1.5;
+        stroke-width: 1.7;
         stroke-dasharray: 4 2; /* Dashed to imply abstract/interface */
         rx: 8;
       }
@@ -126,7 +126,7 @@
       .node-abstract-oracle {
         fill: #F7EBDD; /* Warm light */
         stroke: #B88A63; /* Print-safe warm medium */
-        stroke-width: 1.5;
+        stroke-width: 1.7;
         stroke-dasharray: 4 2;
         rx: 8;
       }
@@ -134,7 +134,7 @@
       .node-abstract-env {
         fill: #EAF4EE; /* Mint light */
         stroke: #9FBDAF; /* Mint medium */
-        stroke-width: 1.5;
+        stroke-width: 1.7;
         stroke-dasharray: 4 2;
         rx: 8;
       }
