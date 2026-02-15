@@ -92,7 +92,7 @@
       }
       .zone-library {
         fill: #F6E4CE; /* Slightly warmer sand */
-        stroke: #CCAC84; /* Slightly warmer border */
+        stroke: #C09B72; /* Print-safe warm border */
         stroke-width: 1;
         rx: 16;
       }
@@ -100,7 +100,7 @@
       /* 3. Interface Layer (The Bridge) */
       .zone-interface {
         fill: #F7FAFD; /* Light cool panel */
-        stroke: #D4C4B0; /* Warm gray border — harmonizes with Arsenal */
+        stroke: #BFA78B; /* Print-safe panel border */
         stroke-width: 1;
         stroke-dasharray: 6 4;
         rx: 12;
@@ -125,7 +125,7 @@
       /* Abstract Oracle (Amber Theme) to match Banana Arsenal */
       .node-abstract-oracle {
         fill: #F7EBDD; /* Warm light */
-        stroke: #C79C74; /* Warm medium */
+        stroke: #B88A63; /* Print-safe warm medium */
         stroke-width: 1.5;
         stroke-dasharray: 4 2;
         rx: 8;
@@ -141,21 +141,21 @@
       /* Concrete Oracle Implementation: Amber Theme */
       .node-concrete {
         fill: #F7EBDD; /* Warm light */
-        stroke: #C79C74; /* Warm medium */
+        stroke: #B88A63; /* Print-safe warm medium */
         stroke-width: 1.5;
         rx: 8;
       }
       /* Problem-Specific Oracle: Orange Theme */
       .node-problem {
         fill: #F3E1CC; /* Warm accent */
-        stroke: #B9855F; /* Warm dark */
+        stroke: #A7734C; /* Print-safe warm dark */
         stroke-width: 1.5;
         rx: 8;
       }
        /* Concrete Oracle Strategy: Yellow Theme */
       .node-strategy {
         fill: #F9EFE2; /* Warm pale */
-        stroke: #C79C74; /* Warm medium */
+        stroke: #B88A63; /* Print-safe warm medium */
         stroke-width: 1.2;
         rx: 6;
       }
