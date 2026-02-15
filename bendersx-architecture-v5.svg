@@ -85,14 +85,14 @@
       /* 2. Zones (Background Areas) */
       /* 2. Zones (Background Areas) */
       .zone-engine {
-        fill: #EFF6FF; /* Pale Blue - Engine/System */
-        stroke: #93C5FD; /* Blue 300 */
+        fill: #FFF1F2; /* Rose 50 - Matching AbstractEnv */
+        stroke: #FECDD3; /* Rose 200 */
         stroke-width: 1;
         rx: 16;
       }
       .zone-library {
-        fill: #FFF0C9; /* Banana Yellow - Arsenal/Tools (from PaperBanana) */
-        stroke: #FBBF24; /* Amber 400 */
+        fill: #F0FDF4; /* Pale Green/Mint - Library/Extensions */
+        stroke: #BBF7D0; /* Green 200 */
         stroke-width: 1;
         rx: 16;
       }
@@ -122,48 +122,48 @@
         stroke-dasharray: 4 2; /* Dashed to imply abstract/interface */
         rx: 8;
       }
-      /* Abstract Oracle (Yellow Theme) to match Banana Arsenal */
+      /* Abstract Oracle (Green Theme) to match Arsenal */
       .node-abstract-oracle {
-        fill: #FFF7ED; /* Orange 50 */
-        stroke: #F59E0B; /* Amber 500 */
+        fill: #F0FDF4; /* Pale Green/Mint - Matches Arsenal */
+        stroke: #10B981; /* Emerald 500 */
         stroke-width: 1.5;
         stroke-dasharray: 4 2;
         rx: 8;
       }
-      /* Abstract Env/Driver (Blue Theme) to match Strategies */
+      /* Abstract Env/Driver (Red Theme) to match Strategies */
       .node-abstract-env {
-        fill: #EFF6FF; /* Pale Blue */
-        stroke: #3B82F6; /* Blue 500 */
+        fill: #FFF1F2; /* Rose 50 - Matches Drivers */
+        stroke: #E11D48; /* Rose 600 */
         stroke-width: 1.5;
         stroke-dasharray: 4 2;
         rx: 8;
       }
-      /* Concrete Oracle Implementation: Amber/Yellow Theme */
+      /* Concrete Oracle Implementation: Green Theme */
       .node-concrete {
-        fill: #FFFBEB; /* Amber 50 */
-        stroke: #D97706; /* Amber 600 */
+        fill: #ECFDF5; /* Emerald 50 */
+        stroke: #059669; /* Emerald 600 */
         stroke-width: 1.5;
         rx: 8;
       }
-      /* Problem-Specific Oracle: Orange Theme */
+      /* Problem-Specific Oracle / Separable: Teal Theme */
       .node-problem {
-        fill: #FFF7ED; /* Orange 50 */
-        stroke: #EA580C; /* Orange 600 */
+        fill: #F0FDFA; /* Teal 50 */
+        stroke: #14B8A6; /* Teal 500 */
         stroke-width: 1.5;
         rx: 8;
       }
-       /* Concrete Oracle Strategy: Green Theme (Success/Go) */
+       /* Concrete Oracle Strategy: Teal Theme */
       .node-strategy {
-        fill: #F0FDF4; /* Emerald 50 */
+        fill: #ECFDF5; /* Emerald 50 */
         stroke: #10B981; /* Emerald 500 */
         stroke-width: 1.2;
         rx: 6;
       }
       
-      /* Driver/Environment Nodes: Blue Theme */
+      /* Driver/Environment Nodes: Red/Pink Theme */
       .node-driver {
-        fill: #F0F9FF; /* Sky 50 */
-        stroke: #0EA5E9; /* Sky 500 */
+        fill: #FFF1F2; /* Rose 50 */
+        stroke: #E11D48; /* Rose 600 */
         stroke-width: 1.5;
         rx: 8;
       }
@@ -266,8 +266,8 @@
      y="140"
      width="550"
      height="340"
-     fill="#F8FAFC"
-     stroke="#94A3B8"
+     fill="#F3E8FF"
+     stroke="#D8B4FE"
      stroke-width="1"
      rx="16"
      id="rect-core-interface" />
@@ -276,14 +276,14 @@
      y="180"
      text-anchor="middle"
      class="zone-header"
-     fill="#475569"
+     fill="#6B21A8"
      id="text-core-header">CORE INTERFACE</text>
   <text
      x="325"
      y="200"
      text-anchor="middle"
      class="label-small"
-     fill="#64748B"
+     fill="#7E22CE"
      id="text-core-desc">Abstract Definitions • Interaction Logic</text>
 
   <!-- Zone 1B: The Engine (Bottom Left) -->
