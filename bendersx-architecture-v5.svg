@@ -177,6 +177,12 @@
         stroke-linecap: round;
         marker-end: url(#arrow-head-muted);
       }
+      
+      /* Inner Nodes */
+      .node-inner-blue { fill: #BFDBFE; stroke: #3B82F6; rx: 4; }
+      .node-inner-amber { fill: #FDE68A; stroke: #F59E0B; rx: 4; }
+      .node-inner-orange { fill: #FED7AA; stroke: #F97316; rx: 4; }
+      .node-inner-emerald { fill: #A7F3D0; stroke: #10B981; rx: 4; }
 
       /* 6. Utility */
       .highlight-loop {
@@ -647,13 +653,21 @@
      id="rect39" />
   <text
      x="825"
-     y="590"
+     y="555"
      text-anchor="middle"
      class="node-header"
      id="text40">SplitOracle</text>
+     
+  <!-- Inner Oracles for Split -->
+  <rect x="735" y="570" width="80" height="40" class="node-inner-orange" />
+  <text x="775" y="595" text-anchor="middle" class="label-small" style="font-weight:600; fill:#9A3412">Oracle 1</text>
+  
+  <rect x="835" y="570" width="80" height="40" class="node-inner-emerald" />
+  <text x="875" y="595" text-anchor="middle" class="label-small" style="font-weight:600; fill:#065F46">Oracle 2</text>
+
   <text
      x="825"
-     y="610"
+     y="635"
      text-anchor="middle"
      class="label-small"
      id="text41">Split benders cuts</text>
@@ -684,13 +698,24 @@
      id="rect42" />
   <text
      x="1155"
-     y="590"
+     y="565"
      text-anchor="middle"
      class="node-header"
      id="text43">SeparableOracle</text>
+     
+  <!-- Inner Oracles for Separable -->
+  <rect x="1060" y="580" width="60" height="30" class="node-inner-blue" />
+  <text x="1090" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#1E3A8A">Oracle</text>
+  
+  <rect x="1125" y="580" width="60" height="30" class="node-inner-amber" />
+  <text x="1155" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#78350F">Oracle</text>
+  
+  <rect x="1190" y="580" width="60" height="30" class="node-inner-emerald" />
+  <text x="1220" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#064E3B">Oracle</text>
+  
   <text
      x="1155"
-     y="610"
+     y="630"
      text-anchor="middle"
      class="label-small"
      id="text44">Parallel / Multi-cut</text>
