@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1400"
+   height="800"
+   viewBox="0 0 1400 800"
+   version="1.1"
+   id="svg50"
+   sodipodi:docname="bendersx-architecture-v3.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+
+      text {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      /* 1. Global Typography */
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        fill: #1E293B; /* Slate 800 */
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        fill: #64748B; /* Slate 500 */
+      }
+      .zone-header {
+        font-size: 18px;
+        font-weight: 600;
+        fill: #334155; /* Slate 700 */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .node-header {
+        font-size: 14px;
+        font-weight: 600;
+        fill: #1E293B; /* Slate 800 */
+      }
+      .node-text {
+        font-size: 12px;
+        fill: #475569; /* Slate 600 */
+      }
+      .label-small {
+        font-size: 11px;
+        fill: #64748B; /* Slate 500 */
+        font-style: italic;
+      }
+
+      /* 2. Zones (Background Areas) */
+      .zone-engine {
+        fill: #E6F3FF; /* Pale Blue - Runtime/Engine */
+        stroke: #BFDBFE; /* Blue 200 */
+        stroke-width: 1;
+        rx: 16;
+      }
+      .zone-library {
+        fill: #F0FDF4; /* Pale Green/Mint - Library/Extensions */
+        stroke: #BBF7D0; /* Green 200 */
+        stroke-width: 1;
+        rx: 16;
+      }
+      
+      /* 3. Interface Layer (The Bridge) */
+      .zone-interface {
+        fill: #F8FAFC; /* Slate 50 */
+        stroke: #CBD5E1; /* Slate 300 */
+        stroke-width: 1;
+        stroke-dasharray: 6 4;
+        rx: 12;
+      }
+
+      /* 4. Nodes (Action/Component Boxes) */
+      /* Master Node: Blue Theme */
+      .node-master {
+        fill: #EFF6FF; /* Blue 50 */
+        stroke: #3B82F6; /* Blue 500 */
+        stroke-width: 1.5;
+        rx: 8;
+      }
+      /* Abstract Oracle Node: Purple/Gray/Neutral Theme */
+      .node-abstract {
+        fill: #F5F3FF; /* Violet 50 */
+        stroke: #8B5CF6; /* Violet 500 */
+        stroke-width: 1.5;
+        stroke-dasharray: 4 2; /* Dashed to imply abstract/interface */
+        rx: 8;
+      }
+      /* Concrete Oracle Implementation: Green Theme */
+      .node-concrete {
+        fill: #FFFBEB; /* Amber 50 (Warm) or Mint */
+        stroke: #F59E0B; /* Amber 500 */
+        stroke-width: 1.5;
+        rx: 8;
+      }
+       /* Concrete Oracle Strategy: Teal Theme */
+      .node-strategy {
+        fill: #ECFDF5; /* Emerald 50 */
+        stroke: #10B981; /* Emerald 500 */
+        stroke-width: 1.2;
+        rx: 6;
+      }
+
+      /* 5. Connectors */
+      .arrow-flow {
+        stroke: #334155; /* Slate 700 */
+        stroke-width: 2.0;
+        fill: none;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        marker-end: url(#arrow-head);
+      }
+      .arrow-impl {
+        stroke: #94A3B8; /* Slate 400 */
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 5 3;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        marker-end: url(#arrow-head-muted);
+      }
+
+      /* 6. Utility */
+      .highlight-loop {
+        fill: none;
+        stroke: #3B82F6; /* Blue 500 */
+        stroke-width: 3;
+        stroke-opacity: 0.1;
+      }
+    </style>
+
+    <!-- Markers -->
+    <marker id="arrow-head" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 L1.5,3 Z" fill="#334155" />
+    </marker>
+    <marker id="arrow-head-muted" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 L1.5,3 Z" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect x="0" y="0" width="1400" height="800" fill="#FFFFFF" />
+
+  <!-- A. Header -->
+  <text x="700" y="60" text-anchor="middle" class="title">BendersX.jl Engine Architecture</text>
+  <text x="700" y="90" text-anchor="middle" class="subtitle">Separation of Concerns: Generic Runtime vs. Specialized Component Library</text>
+
+  <!-- B. Zones -->
+  <!-- Zone 1: The Engine (BendersBase.jl) -->
+  <rect x="50" y="140" width="550" height="580" class="zone-engine" />
+  <text x="325" y="180" text-anchor="middle" class="zone-header">THE ENGINE (BendersBase.jl)</text>
+  <text x="325" y="200" text-anchor="middle" class="label-small">AbstractBendersSeq &#8226; Generic Logic</text>
+
+  <!-- Zone 2: The Arsenal (BendersLibrary.jl) -->
+  <rect x="650" y="140" width="700" height="580" class="zone-library" />
+  <text x="1000" y="180" text-anchor="middle" class="zone-header">THE ARSENAL (BendersLibrary.jl)</text>
+  <text x="1000" y="200" text-anchor="middle" class="label-small">Concrete Implementations &#8226; Problem-Specific Logic</text>
+
+  <!-- D. The Engine Internal Loop (BendersSeq.solve!) -->
+  <!-- D1. Master Problem Node -->
+  <rect x="150" y="300" width="160" height="100" class="node-master" />
+  <text x="230" y="340" text-anchor="middle" class="node-header">Master Problem</text>
+  <text x="230" y="360" text-anchor="middle" class="node-text">Solve relaxation</text>
+  <text x="230" y="375" text-anchor="middle" class="label-small">(JuMP Model)</text>
+
+  <!-- D2. Candidate Gen Node (Implicit in solve, usually just x,t extraction) -->
+  <!-- Just using an annotation on the arrow for simplicity in this abstract view -->
+
+  <!-- D3. Abstract Interface (The Bridge/Socket) -->
+  <rect x="380" y="300" width="160" height="300" class="node-abstract" />
+  <text x="460" y="330" text-anchor="middle" class="node-header">AbstractOracle</text>
+  <text x="460" y="350" text-anchor="middle" class="label-small">Interface Definition</text>
+  
+  <line x1="390" y1="360" x2="530" y2="360" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="2 2" />
+
+  <text x="460" y="380" text-anchor="middle" class="node-text">generate_cuts(...)</text>
+  <text x="460" y="400" text-anchor="middle" class="node-text">check_feasibility(...)</text>
+  <text x="460" y="420" text-anchor="middle" class="node-text">get_obj_value(...)</text>
+
+  <!-- D4. Engine Flow Arrows -->
+  <!-- Master -> Oracle (Candidate Solution) -->
+  <path d="M 230,400 L 230,550 L 380,550" class="arrow-flow" />
+  <text x="290" y="540" text-anchor="middle" class="label-small">x, t (Candidate)</text>
+
+  <!-- Oracle -> Master (Cuts) -->
+  <path d="M 380,350 L 310,350" class="arrow-flow" />
+  <text x="345" y="340" text-anchor="middle" class="label-small">Cuts / Bounds</text>
+  
+  <!-- "Loop" Visual Hint -->
+  <path d="M 120,350 A 30,30 0 0 0 120,550" fill="none" class="highlight-loop" opacity="0.2" stroke="#3B82F6" stroke-width="4" stroke-linecap="round" />
+  <text x="100" y="450" text-anchor="middle" class="label-small" transform="rotate(-90, 100, 450)" fill="#3B82F6">solve! Loop</text>
+
+
+  <!-- E. The Arsenal (Implementations) -->
+  
+  <!-- E1. Standard Block -->
+  <rect x="700" y="250" width="280" height="360" class="zone-interface" fill="#FFFFFF" />
+  <text x="840" y="280" text-anchor="middle" class="node-header">Standard Oracles</text>
+
+    <!-- ClassicalOracle -->
+    <rect x="730" y="300" width="220" height="60" class="node-concrete" />
+    <text x="840" y="325" text-anchor="middle" class="node-header">ClassicalOracle</text>
+    <text x="840" y="345" text-anchor="middle" class="label-small">Single-cut Benders (Standard)</text>
+
+    <!-- ParetoOracle -->
+    <rect x="730" y="380" width="220" height="60" class="node-concrete" />
+    <text x="840" y="405" text-anchor="middle" class="node-header">ParetoOracle</text>
+    <text x="840" y="425" text-anchor="middle" class="label-small">Magnanti-Wong / Pareto-Optimal</text>
+
+    <!-- SeparableOracle -->
+    <rect x="730" y="460" width="220" height="60" class="node-concrete" />
+    <text x="840" y="485" text-anchor="middle" class="node-header">SeparableOracle</text>
+    <text x="840" y="505" text-anchor="middle" class="label-small">Multi-cut / Parallel Subproblems</text>
+
+  <!-- E2. Advanced/Disjunctive Block -->
+  <rect x="1020" y="250" width="280" height="360" class="zone-interface" fill="#FFFFFF" />
+  <text x="1160" y="280" text-anchor="middle" class="node-header">Advanced / Disjunctive</text>
+
+    <!-- SplitOracle -->
+    <rect x="1050" y="300" width="220" height="140" class="node-concrete" stroke="#8B5CF6" fill="#F5F3FF" />
+    <text x="1160" y="325" text-anchor="middle" class="node-header">SplitOracle</text>
+    <text x="1160" y="345" text-anchor="middle" class="label-small">Split Cuts / CGLP</text>
+    
+    <!-- Inner Strategies for Split -->
+    <rect x="1070" y="360" width="180" height="30" class="node-strategy" />
+    <text x="1160" y="380" text-anchor="middle" class="node-text">SelectionRule (MostFrac...)</text>
+    
+    <rect x="1070" y="400" width="180" height="30" class="node-strategy" />
+    <text x="1160" y="420" text-anchor="middle" class="node-text">DisjCutsAppendRule</text>
+
+
+  <!-- F. Implementation Arrows (The "Plug-in") -->
+  <!-- Connecting Concrete to Abstract -->
+  <path d="M 730,330 L 540,330" class="arrow-impl" />
+  <path d="M 730,410 L 600,410 L 600,380 L 540,380" class="arrow-impl" />
+  <path d="M 730,490 L 580,490 L 580,430 L 540,430" class="arrow-impl" />
+  
+  <path d="M 1050,370 L 1000,370 L 1000,580 L 540,580 L 540,550" class="arrow-impl" stroke-dasharray="2 2" />
+  <text x="800" y="570" text-anchor="middle" class="label-small" fill="#94A3B8">Polymorphic Dispatch</text>
+
+
+  <!-- G. Legend/Footer -->
+  <rect x="50" y="740" width="1300" height="40" fill="#F8FAFC" rx="4" />
+  <text x="700" y="765" text-anchor="middle" class="label-small">
+    Master Problem &#8592; [Abstract Interface] &#8592; Concrete Implementation (User Selected)
+  </text>
+
+</svg>
