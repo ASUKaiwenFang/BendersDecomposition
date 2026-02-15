@@ -294,12 +294,17 @@
      class="zone-engine"
      id="rect-engine" />
   <text
-     x="80"
+     x="70"
      y="525"
      text-anchor="start"
      class="zone-header"
-     style="font-size:14px"
      id="text-engine-header">THE ENGINE</text>
+  <text
+     x="70"
+     y="545"
+     text-anchor="start"
+     class="label-small"
+     id="text-engine-desc">Polymorphic Strategies • Loop Control</text>
   <!-- Zone 2: The Arsenal (BendersLibrary.jl) -->
   <rect
      x="650"
@@ -421,94 +426,83 @@
   <!-- Driver 1: BendersSeq -->
   <rect
      x="70"
-     y="510"
+     y="560"
      width="160"
      height="100"
      class="node-driver"
      id="rect16" />
   <text
      x="150"
-     y="540"
+     y="590"
      text-anchor="middle"
      class="node-header"
      id="text17">BendersSeq</text>
   <text
      x="150"
-     y="560"
+     y="610"
      text-anchor="middle"
      class="node-text"
      id="text18">Standard Loop</text>
   <text
      x="150"
-     y="580"
+     y="630"
      text-anchor="middle"
      class="label-small"
      id="text19">Iterative</text>
   <!-- Driver 2: BendersSeqInOut -->
   <rect
      x="245"
-     y="510"
+     y="560"
      width="160"
      height="100"
      class="node-driver"
      id="rect19" />
   <text
      x="325"
-     y="540"
+     y="590"
      text-anchor="middle"
      class="node-header"
      id="text20">BendersSeqInOut</text>
   <text
      x="325"
-     y="560"
+     y="610"
      text-anchor="middle"
      class="node-text"
      id="text21">Stabilized Loop</text>
   <text
      x="325"
-     y="580"
+     y="630"
      text-anchor="middle"
      class="label-small"
      id="text22">In-Out Method</text>
   <!-- Driver 3: BendersBnB -->
   <rect
      x="420"
-     y="510"
+     y="560"
      width="160"
      height="100"
      class="node-driver"
      id="rect22" />
   <text
      x="500"
-     y="540"
+     y="590"
      text-anchor="middle"
      class="node-header"
      id="text23">BendersBnB</text>
   <text
      x="500"
-     y="560"
+     y="610"
      text-anchor="middle"
      class="node-text"
      id="text24">Callback Mode</text>
   <text
      x="500"
-     y="580"
+     y="630"
      text-anchor="middle"
      class="label-small"
      id="text25">Branch &amp; Bound</text>
   <!-- Connection: All Drivers Point to Center of Flow Line -->
-  <path
-     d="M 150,510 L 150,480 L 325,480 L 325,450"
-     class="arrow-impl"
-     id="path25" />
-  <path
-     d="M 325,510 L 325,450"
-     class="arrow-impl"
-     id="path26" />
-  <path
-     d="M 500,510 L 500,480 L 325,480 L 325,450"
-     class="arrow-impl"
-     id="path27" />
+  <!-- Old individual arrows removed in favor of main connector -->
   <!-- E. The Arsenal (Implementations) - 2x2 Grid Layout -->
   <!-- TOP LEFT (Row 1, Col 1): General Typical Oracle -->
   <rect
@@ -750,13 +744,25 @@
      class="label-small"
      id="text44">Parallel / Multi-cut</text>
   <!-- F. Implementation Arrows (The "Plug-in") -->
-  <!-- Single Connection from Arsenal to Socket -->
+  
+  <!-- 1. Arsenal Connector (Right -> Left) -->
   <path
      d="M 650,360 L 520,360"
      class="arrow-impl"
      stroke-width="3"
      stroke-dasharray="8 4"
      id="path-main-connector" />
+     
+  <!-- 2. Driver Connector (Bottom -> Up) -->
+  <path
+     d="M 325,560 L 325,470"
+     class="arrow-impl"
+     stroke-width="3"
+     stroke-dasharray="8 4"
+     marker-end="none"
+     id="path-driver-connector" />
+  <!-- Arrowhead manually pointing UP to the interface -->
+  <path d="M 325,470 L 320,480 L 330,480 Z" fill="#94A3B8" />
   <!-- G. Legend/Footer -->
   <rect
      x="50"
