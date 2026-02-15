@@ -21,8 +21,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2.0697674"
-     inkscape:cx="700.07865"
-     inkscape:cy="430"
+     inkscape:cx="700.07867"
+     inkscape:cy="430.00001"
      inkscape:window-width="3840"
      inkscape:window-height="2036"
      inkscape:window-x="-12"
@@ -40,114 +40,119 @@
     <style
        id="style1">
       .title {
-        font-family: &quot;Times New Roman&quot;, Times, serif;
-        font-size: 14px;
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+        font-size: 15.2px;
         font-weight: 700;
-        fill: #111827;
-      }
-
-      .subtitle {
-        font-family: &quot;Times New Roman&quot;, Times, serif;
-        font-size: 10.8px;
-        fill: #4B5563;
-      }
-
-      .cluster-title {
-        font-family: &quot;Times New Roman&quot;, Times, serif;
-        font-size: 11.8px;
-        font-weight: 700;
-        fill: #111827;
-      }
-
-      .box-title {
-        font-family: &quot;Times New Roman&quot;, Times, serif;
-        font-size: 10.6px;
-        font-weight: 700;
-        fill: #111827;
-      }
-
-      .box-text {
-        font-family: &quot;Times New Roman&quot;, Times, serif;
-        font-size: 9.6px;
         fill: #1F2937;
       }
 
+      .subtitle {
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+        font-size: 10.6px;
+        fill: #5B6472;
+      }
+
+      .cluster-title {
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+        font-size: 11.4px;
+        font-weight: 700;
+        letter-spacing: 0.15px;
+        fill: #1F2937;
+      }
+
+      .box-title {
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+        font-size: 10.1px;
+        font-weight: 600;
+        fill: #253041;
+      }
+
+      .box-text {
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+        font-size: 9.2px;
+        fill: #344256;
+      }
+
       .label {
-        font-family: &quot;Times New Roman&quot;, Times, serif;
-        font-size: 9px;
-        fill: #4B5563;
+        font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+        font-size: 8.6px;
+        fill: #5F6B7A;
       }
 
       .outer {
         fill: none;
-        stroke: #6B7280;
-        stroke-width: 1.1;
+        stroke: #7B8798;
+        stroke-width: 1.0;
       }
 
       .loop {
-        fill: #F8FAFC;
-        stroke: #9CA3AF;
+        fill: #F6F9FD;
+        stroke: #AAB7C9;
         stroke-width: 1.0;
-        stroke-dasharray: 3 2;
+        stroke-dasharray: 4 3;
       }
 
       .base {
-        fill: #E8F0FB;
-        stroke: #4C78A8;
+        fill: #EAF1FB;
+        stroke: #5D84BE;
         stroke-width: 1.0;
       }
 
       .ext {
-        fill: #EAF6EE;
-        stroke: #59A14F;
+        fill: #EDF7F0;
+        stroke: #6A9D73;
         stroke-width: 1.0;
       }
 
       .box {
         fill: #FFFFFF;
-        stroke: #6B7280;
-        stroke-width: 1.0;
+        stroke: #8F9AAF;
+        stroke-width: 0.95;
       }
 
       .band {
-        fill: #F3F4F6;
-        stroke: #9CA3AF;
-        stroke-width: 1.0;
+        fill: #F5F8FB;
+        stroke: #B4BFCD;
+        stroke-width: 0.95;
       }
 
       .arrow {
-        stroke: #374151;
-        stroke-width: 1.3;
+        stroke: #3B4557;
+        stroke-width: 1.25;
+        stroke-linecap: round;
+        stroke-linejoin: round;
         fill: none;
         marker-end: url(#arrow);
       }
 
       .arrow-dashed {
-        stroke: #6B7280;
-        stroke-width: 1.2;
+        stroke: #7E8A9B;
+        stroke-width: 1.1;
+        stroke-linecap: round;
+        stroke-linejoin: round;
         fill: none;
         stroke-dasharray: 4 3;
-        marker-end: url(#arrow);
+        marker-end: url(#arrow-muted);
       }
 
       .zoom-line {
-        stroke: #CBD5E1;
-        stroke-width: 1.1;
+        stroke: #C3CCD9;
+        stroke-width: 1.0;
         fill: none;
         stroke-dasharray: 4 3;
       }
 
       .zoom-focus {
         fill: none;
-        stroke: #CBD5E1;
-        stroke-width: 1.1;
+        stroke: #C3CCD9;
+        stroke-width: 1.0;
         stroke-dasharray: 4 3;
       }
 
       .iface-line {
         fill: none;
-        stroke: #7AA6C2;
-        stroke-width: 1.0;
+        stroke: #8BA9C6;
+        stroke-width: 0.95;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
@@ -162,18 +167,30 @@
        markerUnits="strokeWidth">
       <path
          d="M0,0 L8,3 L0,6 Z"
-         fill="#374151"
+         fill="#3B4557"
          id="path1" />
+    </marker>
+    <marker
+       id="arrow-muted"
+       markerWidth="8"
+       markerHeight="8"
+       refX="8"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L8,3 L0,6 Z"
+         fill="#7E8A9B"
+         id="path1-muted" />
     </marker>
   </defs>
   <rect
      x="0"
-     y="74.887642"
-     width="1321.7303"
-     height="785.11237"
+     y="0"
+     width="1400"
+     height="860"
      fill="#ffffff"
-     id="rect1"
-     style="stroke-width:0.928376" />
+     id="rect1" />
   <text
      x="681.5"
      y="95.213486"
@@ -205,10 +222,10 @@
      class="loop"
      id="rect3" />
   <text
-      x="427.12695"
-      y="208.58984"
-      class="cluster-title"
-      id="text3-1">Environment</text>
+     x="427.12695"
+     y="208.58984"
+     class="cluster-title"
+     id="text3-1">Environment</text>
   <rect
      x="655.03589"
      y="194.77748"
@@ -238,11 +255,11 @@
      class="box"
      id="rect5" />
   <text
-     x="505"
-     y="302"
+     x="510.31461"
+     y="303.44943"
      text-anchor="middle"
      class="box-title"
-     id="text6">Loop Strategy</text>
+     id="text6">Candidate Generation</text>
   <text
      x="505"
      y="324"
@@ -312,14 +329,14 @@
      rx="13"
      ry="7"
      fill="none"
-     stroke="#334155"
+     stroke="#3B4557"
      stroke-width="1.1"
      id="ellipse11" />
   <circle
      cx="1100"
      cy="322"
      r="2.5"
-     fill="#475569"
+     fill="#4E5A6C"
      id="circle11" />
   <!-- Core arrows -->
   <path
@@ -406,11 +423,11 @@
      id="path19" />
   <path
      d="M165,390 L165,340"
-     stroke="#475569"
-     stroke-width="1.1"
+     stroke="#7E8A9B"
+     stroke-width="1"
      stroke-dasharray="4 3"
      fill="none"
-     marker-end="url(#arrow)"
+     marker-end="url(#arrow-muted)"
      id="path20" />
   <path
      d="M90,380 L141,380 L151,352 L179,352 L189,380 L240,380 L240,498 L90,498 Z"
@@ -427,19 +444,19 @@
      class="box-title"
      id="text21">BendersLibrary.jl</text>
   <rect
-      x="111"
-      y="416"
-      width="108"
-      height="24"
-      rx="6"
-      class="box"
-      id="rect21" />
+     x="111"
+     y="416"
+     width="108"
+     height="24"
+     rx="6"
+     class="box"
+     id="rect21" />
   <text
-      x="165"
-      y="432"
-      text-anchor="middle"
-      class="box-text"
-      id="text22">BendersSeqInOut</text>
+     x="165"
+     y="432"
+     text-anchor="middle"
+     class="box-text"
+     id="text22">BendersSeqInOut</text>
   <!-- BendersBase foundation block -->
   <path
      d="M268,480 L782,480 L782,556 L754,566 L754,594 L782,604 L782,680 L268,680 Z"
@@ -449,12 +466,12 @@
      d="M782,554 L752,565 L752,595 L782,606"
      class="iface-line"
      id="path24-4-5"
-     style="fill:none;stroke:#7aa6c2;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
+     style="fill:none;stroke:#8ba9c6;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
   <path
      d="M782,552 L750,563 L750,597 L782,608"
      class="iface-line"
      id="path24-4-2"
-     style="fill:none;stroke:#7aa6c2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
+     style="fill:none;stroke:#8ba9c6;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
   <path
      d="M782,550 L748,561 L748,599 L782,610"
      class="iface-line"
@@ -567,11 +584,11 @@
      id="path32" />
   <path
      d="m 803.10112,506.07865 h -16"
-     stroke="#6B7280"
-     stroke-width="1.1"
+     stroke="#7E8A9B"
+     stroke-width="1"
      stroke-dasharray="4, 3"
      fill="none"
-     marker-end="url(#arrow)"
+     marker-end="url(#arrow-muted)"
      id="path35" />
   <text
      x="845"
@@ -594,7 +611,7 @@
      rx="6"
      class="box"
      id="rect37-3"
-     style="fill:#ffffff;stroke:#6b7280;stroke-width:1" />
+     style="fill:#ffffff;stroke:#8f9aaf;stroke-width:0.95" />
   <text
      x="936"
      y="548"
@@ -651,7 +668,7 @@
      rx="6.4746265"
      class="box"
      id="rect40-2"
-     style="fill:#ffffff;stroke:#6b7280;stroke-width:0.906304" />
+     style="fill:#ffffff;stroke:#8f9aaf;stroke-width:0.95" />
   <text
      x="1107"
      y="548"
@@ -692,48 +709,48 @@
      id="path44" />
   <!-- Plug-and-play principle band -->
   <rect
-     x="170"
-     y="764"
-     width="1060"
-     height="56"
-     rx="10"
+     x="170.17212"
+     y="715.85748"
+     width="1059.6558"
+     height="103.97037"
+     rx="9.9967527"
      class="band"
      id="rect44" />
   <!-- Plug-and-slot legend -->
   <g
-     transform="matrix(1.25,0,0,1.25,177.789,764.749)"
+     transform="matrix(1.4921044,0,0,1.8572072,185.70141,725.7177)"
      id="g50">
     <path
-       d="M 0,6 H 104 V 14 L 90,19 V 33 L 104,38 V 44 H 0 Z"
-       fill="#e8f0fb"
-       stroke="#6b7280"
+       d="m 0,6 h 104 v 8 l -14,5 v 14 l 14,5 v 6 H 0 Z"
+       fill="#eaf1fb"
+       stroke="#8f9aaf"
        stroke-width="1"
        id="path45" />
     <path
-       d="M 104,13 L 89,18 V 34 L 104,39"
+       d="m 104,13 -15,5 v 16 l 15,5"
        class="iface-line"
        id="path46" />
     <path
-       d="M 104,12 L 88,17 V 35 L 104,40"
+       d="m 104,12 -16,5 v 18 l 16,5"
        class="iface-line"
        id="path47" />
     <path
-       d="M 104,11 L 87,16 V 36 L 104,41"
+       d="m 104,11 -17,5 v 20 l 17,5"
        class="iface-line"
        id="path47-2" />
     <path
-       d="M 120,6 H 224 V 44 H 120 V 38 L 106,33 V 19 L 120,14 Z"
-       fill="#eaf6ee"
-       stroke="#6b7280"
+       d="M 120,6 H 224 V 44 H 120 V 38 L 106,33 V 19 l 14,-5 z"
+       fill="#edf7f0"
+       stroke="#8f9aaf"
        stroke-width="1"
        id="path48" />
     <path
        d="M 114,26 H 98"
-       stroke="#6b7280"
-       stroke-width="1.1"
+       stroke="#7e8a9b"
+       stroke-width="1"
        stroke-dasharray="4, 3"
        fill="none"
-       marker-end="url(#arrow)"
+       marker-end="url(#arrow-muted)"
        id="path50" />
     <text
        x="112"
@@ -755,12 +772,11 @@
        id="text55">New Module</text>
   </g>
   <text
-     x="720"
-     y="798"
+     x="807.93256"
+     y="786.40448"
      text-anchor="middle"
      class="box-text"
-     id="text50">Plug-and-play extension: BendersBase stays stable while
-    BendersLibrary attaches interchangeable modules.</text>
+     id="text50">Plug-and-play extension: BendersBase stays stable while BendersLibrary attaches interchangeable modules.</text>
   <text
      xml:space="preserve"
      id="text51"
@@ -777,4 +793,14 @@
      text-anchor="middle"
      class="label"
      id="text53">OtherOracle</text>
+  <text
+     xml:space="preserve"
+     style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
+     x="506.82022"
+     y="304.38202"
+     id="text3"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       x="506.82022"
+       y="304.38202"> </tspan></text>
 </svg>
