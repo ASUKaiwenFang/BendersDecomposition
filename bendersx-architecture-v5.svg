@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="1600"
+   width="1400"
    height="800"
-   viewBox="0 0 1600 800"
+   viewBox="0 0 1400 800"
    version="1.1"
    id="svg50"
    sodipodi:docname="bendersx-architecture-v5.svg"
@@ -11,6 +11,24 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview47"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.225"
+     inkscape:cx="699.77528"
+     inkscape:cy="400"
+     inkscape:window-width="3840"
+     inkscape:window-height="2036"
+     inkscape:window-x="-12"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg50" />
   <defs
      id="defs1">
     <style
@@ -18,7 +36,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
 
       text {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-family: &quot;Inter&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
       }
 
       /* 1. Global Typography */
@@ -168,167 +186,551 @@
         stroke-opacity: 0.1;
       }
     </style>
-
     <!-- Markers -->
-    <marker id="arrow-head" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L10,3 L0,6 L1.5,3 Z" fill="#334155" />
+    <marker
+       id="arrow-head"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L10,3 L0,6 L1.5,3 Z"
+         fill="#334155"
+         id="path1" />
     </marker>
-    <marker id="arrow-head-muted" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L10,3 L0,6 L1.5,3 Z" fill="#94A3B8" />
+    <marker
+       id="arrow-head-muted"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L10,3 L0,6 L1.5,3 Z"
+         fill="#94A3B8"
+         id="path2" />
     </marker>
   </defs>
-
   <!-- Background Canvas -->
-  <rect x="0" y="0" width="1600" height="800" fill="#FFFFFF" />
-
+  <rect
+     x="0"
+     y="0"
+     width="1400"
+     height="800"
+     fill="#FFFFFF"
+     id="rect2" />
   <!-- A. Header -->
-  <text x="800" y="60" text-anchor="middle" class="title">BendersX.jl Architecture</text>
-  <text x="800" y="90" text-anchor="middle" class="subtitle">Fully Polymorphic Design: Swappable Environments &amp; Plug-and-Play Components</text>
-
+  <text
+     x="700"
+     y="60"
+     text-anchor="middle"
+     class="title"
+     id="text2">BendersX.jl Architecture</text>
+  <text
+     x="700"
+     y="90"
+     text-anchor="middle"
+     class="subtitle"
+     id="text3">Fully Polymorphic Design: Swappable Environments &amp; Plug-and-Play Components</text>
   <!-- B. Zones -->
   <!-- Zone 1: The Engine (BendersBase.jl) -->
-  <rect x="50" y="140" width="550" height="580" class="zone-engine" />
-  <text x="325" y="180" text-anchor="middle" class="zone-header">THE ENGINE (BendersBase.jl)</text>
-  <text x="325" y="200" text-anchor="middle" class="label-small">Core Interfaces &#8226; Execution Drivers</text>
-
+  <rect
+     x="50"
+     y="140"
+     width="550"
+     height="580"
+     class="zone-engine"
+     id="rect3" />
+  <text
+     x="325"
+     y="180"
+     text-anchor="middle"
+     class="zone-header"
+     id="text4">THE ENGINE</text>
+  <text
+     x="325"
+     y="200"
+     text-anchor="middle"
+     class="label-small"
+     id="text5">Core Interfaces • Execution Drivers</text>
   <!-- Zone 2: The Arsenal (BendersLibrary.jl) -->
-  <!-- Width increased to cover 4 columns -->
-  <rect x="650" y="140" width="900" height="580" class="zone-library" />
-  <text x="1100" y="180" text-anchor="middle" class="zone-header">THE ARSENAL (BendersLibrary.jl)</text>
-  <text x="1100" y="200" text-anchor="middle" class="label-small">Concrete Oracles &#8226; Problem-Specific Logic</text>
-
+  <rect
+     x="650"
+     y="140"
+     width="700"
+     height="580"
+     class="zone-library"
+     id="rect5" />
+  <text
+     x="1000"
+     y="180"
+     text-anchor="middle"
+     class="zone-header"
+     id="text6">THE ARSENAL</text>
+  <text
+     x="1000"
+     y="200"
+     text-anchor="middle"
+     class="label-small"
+     id="text7">Concrete Oracles • Problem-Specific Logic</text>
   <!-- C. The Engine Interfaces (Abstract Layer) -->
-  
   <!-- C1. Driver Interface (AbstractBendersEnv) -->
-  <rect x="100" y="240" width="450" height="180" class="node-abstract" />
-  <text x="325" y="270" text-anchor="middle" class="node-header">AbstractBendersEnv</text>
-  <text x="325" y="290" text-anchor="middle" class="label-small">[Driver Interface]</text>
-  
+  <rect
+     x="100"
+     y="240"
+     width="450"
+     height="180"
+     class="node-abstract"
+     id="rect7" />
+  <text
+     x="325"
+     y="270"
+     text-anchor="middle"
+     class="node-header"
+     id="text8">AbstractBendersEnv</text>
+  <text
+     x="325"
+     y="290"
+     text-anchor="middle"
+     class="label-small"
+     id="text9">[Driver Interface]</text>
   <!-- Inside Env: Master and Oracle Slots -->
-  <line x1="120" y1="300" x2="530" y2="300" stroke="#CBD5E1" stroke-width="1" />
-  
+  <line
+     x1="120"
+     y1="300"
+     x2="530"
+     y2="300"
+     stroke="#CBD5E1"
+     stroke-width="1"
+     id="line9" />
   <!-- Master Slot -->
-  <rect x="130" y="320" width="140" height="80" class="node-master" />
-  <text x="200" y="350" text-anchor="middle" class="node-header">Master</text>
-  <text x="200" y="370" text-anchor="middle" class="label-small">(JuMP Model)</text>
-
+  <rect
+     x="130"
+     y="320"
+     width="140"
+     height="80"
+     class="node-master"
+     id="rect9" />
+  <text
+     x="200"
+     y="350"
+     text-anchor="middle"
+     class="node-header"
+     id="text10">Master</text>
+  <text
+     x="200"
+     y="370"
+     text-anchor="middle"
+     class="label-small"
+     id="text11">(JuMP Model)</text>
   <!-- Oracle Slot (Abstract) -->
-  <rect x="380" y="320" width="140" height="80" class="node-abstract" stroke-dasharray="2 2" />
-  <text x="450" y="350" text-anchor="middle" class="node-header">AbstractOracle</text>
-  <text x="450" y="370" text-anchor="middle" class="label-small">(Socket)</text>
-
+  <rect
+     x="380"
+     y="320"
+     width="140"
+     height="80"
+     class="node-abstract"
+     stroke-dasharray="2 2"
+     id="rect11" />
+  <text
+     x="450"
+     y="350"
+     text-anchor="middle"
+     class="node-header"
+     id="text12">AbstractOracle</text>
+  <text
+     x="450"
+     y="370"
+     text-anchor="middle"
+     class="label-small"
+     id="text13">(Socket)</text>
   <!-- Flow within Env (v3 Loop Geometry) -->
   <!-- Master -> Oracle (Candidate) - Route around bottom -->
-  <path d="M 200,400 L 200,450 L 450,450 L 450,400" class="arrow-flow" />
-  <text x="325" y="440" text-anchor="middle" class="label-small">x, t (Candidate)</text>
-  
+  <path
+     d="M 200,400 L 200,450 L 450,450 L 450,400"
+     class="arrow-flow"
+     id="path13" />
+  <text
+     x="325"
+     y="440"
+     text-anchor="middle"
+     class="label-small"
+     id="text14">x, t (Candidate)</text>
   <!-- Oracle -> Master (Cuts) - Route direct through middle -->
-  <path d="M 380,360 L 270,360" class="arrow-flow" />
-  <text x="325" y="350" text-anchor="middle" class="label-small">Cuts / Bounds</text>
-
-
+  <path
+     d="M 380,360 L 270,360"
+     class="arrow-flow"
+     id="path14" />
+  <text
+     x="325"
+     y="350"
+     text-anchor="middle"
+     class="label-small"
+     id="text15">Cuts / Bounds</text>
   <!-- D. Concrete Drivers (Polymorphic Strategies) -->
-  <text x="325" y="490" text-anchor="middle" class="label-small" fill="#94A3B8">Select Execution Strategy:</text>
-  
+  <text
+     x="325"
+     y="490"
+     text-anchor="middle"
+     class="label-small"
+     fill="#94A3B8"
+     id="text16">Select Execution Strategy:</text>
   <!-- Driver 1: BendersSeq -->
-  <rect x="70" y="510" width="160" height="100" class="node-driver" />
-  <text x="150" y="540" text-anchor="middle" class="node-header">BendersSeq</text>
-  <text x="150" y="560" text-anchor="middle" class="node-text">Standard Loop</text>
-  <text x="150" y="580" text-anchor="middle" class="label-small">Iterative</text>
-
+  <rect
+     x="70"
+     y="510"
+     width="160"
+     height="100"
+     class="node-driver"
+     id="rect16" />
+  <text
+     x="150"
+     y="540"
+     text-anchor="middle"
+     class="node-header"
+     id="text17">BendersSeq</text>
+  <text
+     x="150"
+     y="560"
+     text-anchor="middle"
+     class="node-text"
+     id="text18">Standard Loop</text>
+  <text
+     x="150"
+     y="580"
+     text-anchor="middle"
+     class="label-small"
+     id="text19">Iterative</text>
   <!-- Driver 2: BendersSeqInOut -->
-  <rect x="245" y="510" width="160" height="100" class="node-driver" />
-  <text x="325" y="540" text-anchor="middle" class="node-header">BendersSeqInOut</text>
-  <text x="325" y="560" text-anchor="middle" class="node-text">Stabilized Loop</text>
-  <text x="325" y="580" text-anchor="middle" class="label-small">In-Out Method</text>
-
+  <rect
+     x="245"
+     y="510"
+     width="160"
+     height="100"
+     class="node-driver"
+     id="rect19" />
+  <text
+     x="325"
+     y="540"
+     text-anchor="middle"
+     class="node-header"
+     id="text20">BendersSeqInOut</text>
+  <text
+     x="325"
+     y="560"
+     text-anchor="middle"
+     class="node-text"
+     id="text21">Stabilized Loop</text>
+  <text
+     x="325"
+     y="580"
+     text-anchor="middle"
+     class="label-small"
+     id="text22">In-Out Method</text>
   <!-- Driver 3: BendersBnB -->
-  <rect x="420" y="510" width="160" height="100" class="node-driver" />
-  <text x="500" y="540" text-anchor="middle" class="node-header">BendersBnB</text>
-  <text x="500" y="560" text-anchor="middle" class="node-text">Callback Mode</text>
-  <text x="500" y="580" text-anchor="middle" class="label-small">Branch &amp; Bound</text>
-
-
+  <rect
+     x="420"
+     y="510"
+     width="160"
+     height="100"
+     class="node-driver"
+     id="rect22" />
+  <text
+     x="500"
+     y="540"
+     text-anchor="middle"
+     class="node-header"
+     id="text23">BendersBnB</text>
+  <text
+     x="500"
+     y="560"
+     text-anchor="middle"
+     class="node-text"
+     id="text24">Callback Mode</text>
+  <text
+     x="500"
+     y="580"
+     text-anchor="middle"
+     class="label-small"
+     id="text25">Branch &amp; Bound</text>
   <!-- Connection: All Drivers Point to Center of Flow Line -->
-  <path d="M 150,510 L 150,480 L 325,480 L 325,450" class="arrow-impl" />
-  <path d="M 325,510 L 325,450" class="arrow-impl" />
-  <path d="M 500,510 L 500,480 L 325,480 L 325,450" class="arrow-impl" />
-
-
-  <!-- E. The Arsenal (Implementations) - 4 Columns -->
-  
-  <!-- Col 1: General TypicalOracle -->
-  <rect x="670" y="250" width="200" height="420" class="zone-interface" fill="#FFFFFF" />
-  <text x="770" y="280" text-anchor="middle" class="node-header">General Typical</text>
-
-    <!-- ClassicalOracle -->
-    <rect x="680" y="300" width="180" height="60" class="node-concrete" />
-    <text x="770" y="325" text-anchor="middle" class="node-header">ClassicalOracle</text>
-    <text x="770" y="345" text-anchor="middle" class="label-small">Single-cut</text>
-
-    <!-- UnifiedOracle -->
-    <rect x="680" y="380" width="180" height="60" class="node-concrete" />
-    <text x="770" y="405" text-anchor="middle" class="node-header">UnifiedOracle</text>
-    <text x="770" y="425" text-anchor="middle" class="label-small">Standard / Pareto</text>
-    
-    <!-- ParetoOracle (Optional, keeping small) -->
-    <rect x="680" y="460" width="180" height="60" class="node-concrete" />
-    <text x="770" y="485" text-anchor="middle" class="node-header">ParetoOracle</text>
-    <text x="770" y="505" text-anchor="middle" class="label-small">Magnanti-Wong</text>
-
-  <!-- Col 2: SeparableOracle (Isolated) -->
-  <rect x="890" y="250" width="200" height="420" class="zone-interface" fill="#FFFFFF" />
-  <text x="990" y="280" text-anchor="middle" class="node-header">Separable</text>
-
-    <!-- SeparableOracle -->
-    <rect x="900" y="300" width="180" height="140" class="node-concrete" stroke="#0EA5E9" fill="#E0F2FE" />
-    <text x="990" y="360" text-anchor="middle" class="node-header">SeparableOracle</text>
-    <text x="990" y="380" text-anchor="middle" class="label-small">Parallel / Multi-cut</text>
-    
-  <!-- Col 3: Advanced / Disjunctive -->
-  <rect x="1110" y="250" width="200" height="420" class="zone-interface" fill="#FFFFFF" />
-  <text x="1210" y="280" text-anchor="middle" class="node-header">Advanced</text>
-
-    <!-- SplitOracle -->
-    <rect x="1120" y="300" width="180" height="140" class="node-concrete" stroke="#8B5CF6" fill="#F5F3FF" />
-    <text x="1210" y="325" text-anchor="middle" class="node-header">SplitOracle</text>
-    <text x="1210" y="345" text-anchor="middle" class="label-small">Split Cuts</text>
-    
-    <rect x="1130" y="360" width="160" height="30" class="node-strategy" />
-    <text x="1210" y="380" text-anchor="middle" class="node-text">SelectionRule</text>
-    <rect x="1130" y="400" width="160" height="30" class="node-strategy" />
-    <text x="1210" y="420" text-anchor="middle" class="node-text">AppendRule</text>
-
-  <!-- Col 4: Problem-Specific -->
-  <rect x="1330" y="250" width="200" height="420" class="zone-interface" fill="#FFFFFF" />
-  <text x="1430" y="280" text-anchor="middle" class="node-header">Problem-Specific</text>
-
-    <!-- CFLPKnapsackOracle -->
-    <rect x="1340" y="300" width="180" height="80" class="node-problem" />
-    <text x="1430" y="330" text-anchor="middle" class="node-header">CFLP Knapsack</text>
-    <text x="1430" y="350" text-anchor="middle" class="label-small">Capacitated FL</text>
-    
-    <!-- UFLPKnapsackOracle -->
-    <rect x="1340" y="400" width="180" height="80" class="node-problem" />
-    <text x="1430" y="430" text-anchor="middle" class="node-header">UFLP Knapsack</text>
-    <text x="1430" y="450" text-anchor="middle" class="label-small">Uncapacitated FL</text>
-
-
+  <path
+     d="M 150,510 L 150,480 L 325,480 L 325,450"
+     class="arrow-impl"
+     id="path25" />
+  <path
+     d="M 325,510 L 325,450"
+     class="arrow-impl"
+     id="path26" />
+  <path
+     d="M 500,510 L 500,480 L 325,480 L 325,450"
+     class="arrow-impl"
+     id="path27" />
+  <!-- E. The Arsenal (Implementations) - 2x2 Grid Layout -->
+  <!-- TOP LEFT (Row 1, Col 1): General Typical Oracle -->
+  <rect
+     x="670"
+     y="240"
+     width="310"
+     height="230"
+     class="zone-interface"
+     fill="#FFFFFF"
+     id="rect27" />
+  <text
+     x="825"
+     y="270"
+     text-anchor="middle"
+     class="node-header"
+     id="text27">General TypicalOracle</text>
+  <!-- ClassicalOracle -->
+  <rect
+     x="715"
+     y="290"
+     width="220"
+     height="50"
+     class="node-concrete"
+     id="rect28" />
+  <text
+     x="825"
+     y="315"
+     text-anchor="middle"
+     class="node-header"
+     id="text28">ClassicalOracle</text>
+  <text
+     x="825"
+     y="330"
+     text-anchor="middle"
+     class="label-small"
+     style="font-size:10px"
+     id="text29">Single-cut classcal benders cut</text>
+  <!-- UnifiedOracle -->
+  <rect
+     x="715"
+     y="350"
+     width="220"
+     height="50"
+     class="node-concrete"
+     id="rect29" />
+  <text
+     x="825"
+     y="375"
+     text-anchor="middle"
+     class="node-header"
+     id="text30">UnifiedOracle</text>
+  <text
+     x="825"
+     y="390"
+     text-anchor="middle"
+     class="label-small"
+     style="font-size:10px"
+     id="text31">Optimality-feasiblility-unified benders cut</text>
+  <!-- ParetoOracle -->
+  <rect
+     x="715"
+     y="410"
+     width="220"
+     height="50"
+     class="node-concrete"
+     id="rect31" />
+  <text
+     x="825"
+     y="435"
+     text-anchor="middle"
+     class="node-header"
+     id="text32">ParetoOracle</text>
+  <text
+     x="825"
+     y="450"
+     text-anchor="middle"
+     class="label-small"
+     style="font-size:10px"
+     id="text33">Magnanti-Wong benders cut</text>
+  <!-- TOP RIGHT (Row 1, Col 2): Problem-Specific Oracle (Moved from Bottom Right) -->
+  <rect
+     x="1000"
+     y="240"
+     width="310"
+     height="230"
+     class="zone-interface"
+     fill="#FFFFFF"
+     id="rect33" />
+  <text
+     x="1155"
+     y="270"
+     text-anchor="middle"
+     class="node-header"
+     id="text34">Problem-Specific TypicalOracle</text>
+  <!-- CFLPKnapsackOracle (Changed 'node-problem' to 'node-concrete' for color) -->
+  <rect
+     x="1045"
+     y="310"
+     width="220"
+     height="60"
+     class="node-concrete"
+     id="rect34" />
+  <text
+     x="1155"
+     y="335"
+     text-anchor="middle"
+     class="node-header"
+     id="text35">CFLPKnapsackOracle</text>
+  <text
+     x="1155"
+     y="355"
+     text-anchor="middle"
+     class="label-small"
+     id="text36"><tspan
+       sodipodi:role="line"
+       id="tspan47"
+       x="1155"
+       y="355">KnapsackTechnique-Based benders cut</tspan><tspan
+       sodipodi:role="line"
+       id="tspan48"
+       x="1155"
+       y="368.75">for capacitated facility locaion problem</tspan></text>
+  <!-- UFLPKnapsackOracle (Changed 'node-problem' to 'node-concrete' for color) -->
+  <rect
+     x="1045"
+     y="380"
+     width="220"
+     height="60"
+     class="node-concrete"
+     id="rect36" />
+  <text
+     x="1155"
+     y="405"
+     text-anchor="middle"
+     class="node-header"
+     id="text37">UFLPKnapsackOracle</text>
+  <text
+     x="1155"
+     y="425"
+     text-anchor="middle"
+     class="label-small"
+     id="text38"><tspan
+       sodipodi:role="line"
+       id="tspan49"
+       x="1155"
+       y="425">KnapsackTechnique-Based benders cut</tspan><tspan
+       sodipodi:role="line"
+       id="tspan50"
+       x="1155"
+       y="438.75">for uncapacitated facility locaion problem</tspan></text>
+  <!-- BOTTOM LEFT (Row 2, Col 1): Advanced Oracle -->
+  <rect
+     x="670"
+     y="480"
+     width="310"
+     height="200"
+     class="zone-interface"
+     fill="#FFFFFF"
+     id="rect38" />
+  <text
+     x="825"
+     y="510"
+     text-anchor="middle"
+     class="node-header"
+     id="text39">DisjunctiveOracle</text>
+  <!-- SplitOracle -->
+  <rect
+     x="715"
+     y="530"
+     width="220"
+     height="120"
+     class="node-concrete"
+     stroke="#8B5CF6"
+     fill="#F5F3FF"
+     id="rect39" />
+  <text
+     x="825"
+     y="590"
+     text-anchor="middle"
+     class="node-header"
+     id="text40">SplitOracle</text>
+  <text
+     x="825"
+     y="610"
+     text-anchor="middle"
+     class="label-small"
+     id="text41">Split benders cuts</text>
+  <!-- BOTTOM RIGHT (Row 2, Col 2): Separable Oracle (Moved from Top Right) -->
+  <rect
+     x="1000"
+     y="480"
+     width="310"
+     height="200"
+     class="zone-interface"
+     fill="#FFFFFF"
+     id="rect41" />
+  <text
+     x="1155"
+     y="510"
+     text-anchor="middle"
+     class="node-header"
+     id="text42">SeparableOracle</text>
+  <!-- SeparableOracle -->
+  <rect
+     x="1045"
+     y="540"
+     width="220"
+     height="100"
+     class="node-concrete"
+     stroke="#0EA5E9"
+     fill="#E0F2FE"
+     id="rect42" />
+  <text
+     x="1155"
+     y="590"
+     text-anchor="middle"
+     class="node-header"
+     id="text43">SeparableOracle</text>
+  <text
+     x="1155"
+     y="610"
+     text-anchor="middle"
+     class="label-small"
+     id="text44">Parallel / Multi-cut</text>
   <!-- F. Implementation Arrows (The "Plug-in") -->
-  <!-- Col 1 -->
-  <path d="M 670,330 L 520,340" class="arrow-impl" />
-  <!-- Col 2 -->
-  <path d="M 890,370 L 600,370 L 600,360 L 520,360" class="arrow-impl" />
-  <!-- Col 3 -->
-  <path d="M 1110,370 L 1080,370 L 1080,620 L 560,620 L 560,380 L 520,380" class="arrow-impl" stroke-dasharray="2 2" />
-  <!-- Col 4 -->
-  <path d="M 1330,340 L 1300,340 L 1300,650 L 540,650 L 540,380 L 520,380" class="arrow-impl" stroke-dasharray="2 2" />
-
-
+  <!-- Top Left (General) -->
+  <path
+     d="M 670,300 L 520,330"
+     class="arrow-impl"
+     id="path44" />
+  <!-- Top Right (Problem-Specific) -->
+  <path
+     d="M 1000,350 L 540,350 L 540,330 L 520,330"
+     class="arrow-impl"
+     id="path45" />
+  <!-- Bottom Left (Advanced) -->
+  <path
+     d="M 670,550 L 630,550 L 630,360 L 520,360"
+     class="arrow-impl"
+     stroke-dasharray="2 2"
+     id="path46" />
+  <!-- Bottom Right (Separable) -->
+  <path
+     d="M 1000,550 L 980,550 L 980,680 L 580,680 L 580,380 L 520,380"
+     class="arrow-impl"
+     stroke-dasharray="2 2"
+     id="path47" />
   <!-- G. Legend/Footer -->
-  <rect x="50" y="740" width="1500" height="40" fill="#F8FAFC" rx="4" />
-  <text x="800" y="765" text-anchor="middle" class="label-small">
-    Master Problem &#8592; [Abstract Interface] &#8592; Concrete Implementation (User Selected)
+  <rect
+     x="50"
+     y="740"
+     width="1300"
+     height="40"
+     fill="#F8FAFC"
+     rx="4"
+     id="rect47" />
+  <text
+     x="700"
+     y="765"
+     text-anchor="middle"
+     class="label-small"
+     id="text47">
+    Master Problem ← [Abstract Interface] ← Concrete Implementation (User Selected)
   </text>
-
 </svg>
