@@ -43,12 +43,12 @@
       .title {
         font-size: 28px;
         font-weight: 700;
-        fill: #1E293B; /* Slate 800 */
+        fill: #111827; /* Neutral 900 */
       }
       .subtitle {
         font-size: 16px;
         font-weight: 400;
-        fill: #64748B; /* Slate 500 */
+        fill: #4B5563; /* Neutral 600 */
       }
       .zone-header {
         font-size: 18px;
@@ -60,47 +60,47 @@
       .node-header {
         font-size: 14px;
         font-weight: 600;
-        fill: #1E293B; /* Slate 800 */
+        fill: #111827; /* Neutral 900 */
       }
       .node-text {
         font-size: 12px;
-        fill: #475569; /* Slate 600 */
+        fill: #4B5563; /* Neutral 600 */
       }
       .label-small {
         font-size: 11px;
-        fill: #64748B; /* Slate 500 */
+        fill: #6B7280; /* Neutral 500 */
         font-style: italic;
       }
       .label-flow {
         font-size: 11px;
         font-weight: 600;
-        fill: #475569; /* Slate 600 - Reverted */
+        fill: #4B5563; /* Neutral 600 */
       }
       .label-flow-return {
         font-size: 11px;
         font-weight: 600;
-        fill: #475569; /* Slate 600 - Reverted */
+        fill: #4B5563; /* Neutral 600 */
       }
 
       /* 2. Zones (Background Areas) */
       /* 2. Zones (Background Areas) */
       .zone-engine {
-        fill: #FFF1F2; /* Rose 50 - Matching AbstractEnv */
-        stroke: #FECDD3; /* Rose 200 */
+        fill: #E5F1EC; /* Soft mint */
+        stroke: #BFD4C8; /* Mint border */
         stroke-width: 1;
         rx: 16;
       }
       .zone-library {
-        fill: #F0FDF4; /* Pale Green/Mint - Library/Extensions */
-        stroke: #BBF7D0; /* Green 200 */
+        fill: #F6E4CE; /* Slightly warmer sand */
+        stroke: #CCAC84; /* Slightly warmer border */
         stroke-width: 1;
         rx: 16;
       }
       
       /* 3. Interface Layer (The Bridge) */
       .zone-interface {
-        fill: #F8FAFC; /* Slate 50 */
-        stroke: #CBD5E1; /* Slate 300 */
+        fill: #F7FAFD; /* Light cool panel */
+        stroke: #C9D7E4; /* Cool border */
         stroke-width: 1;
         stroke-dasharray: 6 4;
         rx: 12;
@@ -109,61 +109,61 @@
       /* 4. Nodes (Action/Component Boxes) */
       /* Master Node: Blue Theme */
       .node-master {
-        fill: #EFF6FF; /* Blue 50 */
-        stroke: #3B82F6; /* Blue 500 */
+        fill: #EAF3FC; /* Cool light */
+        stroke: #8FAEC4; /* Cool medium */
         stroke-width: 1.5;
         rx: 8;
       }
       /* Abstract Node (Shared for Env and Oracle): Purple/Gray/Neutral Theme */
       .node-abstract {
-        fill: #F5F3FF; /* Violet 50 */
-        stroke: #8B5CF6; /* Violet 500 */
+        fill: #EEF4FA; /* Cool neutral */
+        stroke: #9CB5C8; /* Cool muted */
         stroke-width: 1.5;
         stroke-dasharray: 4 2; /* Dashed to imply abstract/interface */
         rx: 8;
       }
-      /* Abstract Oracle (Green Theme) to match Arsenal */
+      /* Abstract Oracle (Amber Theme) to match Banana Arsenal */
       .node-abstract-oracle {
-        fill: #F0FDF4; /* Pale Green/Mint - Matches Arsenal */
-        stroke: #10B981; /* Emerald 500 */
+        fill: #F7EBDD; /* Warm light */
+        stroke: #C79C74; /* Warm medium */
         stroke-width: 1.5;
         stroke-dasharray: 4 2;
         rx: 8;
       }
-      /* Abstract Env/Driver (Red Theme) to match Strategies */
+      /* Abstract Env/Driver (Green Theme) to match Engine */
       .node-abstract-env {
-        fill: #FFF1F2; /* Rose 50 - Matches Drivers */
-        stroke: #E11D48; /* Rose 600 */
+        fill: #EAF4EE; /* Mint light */
+        stroke: #9FBDAF; /* Mint medium */
         stroke-width: 1.5;
         stroke-dasharray: 4 2;
         rx: 8;
       }
-      /* Concrete Oracle Implementation: Green Theme */
+      /* Concrete Oracle Implementation: Amber Theme */
       .node-concrete {
-        fill: #ECFDF5; /* Emerald 50 */
-        stroke: #059669; /* Emerald 600 */
+        fill: #F7EBDD; /* Warm light */
+        stroke: #C79C74; /* Warm medium */
         stroke-width: 1.5;
         rx: 8;
       }
-      /* Problem-Specific Oracle / Separable: Teal Theme */
+      /* Problem-Specific Oracle: Orange Theme */
       .node-problem {
-        fill: #F0FDFA; /* Teal 50 */
-        stroke: #14B8A6; /* Teal 500 */
+        fill: #F3E1CC; /* Warm accent */
+        stroke: #B9855F; /* Warm dark */
         stroke-width: 1.5;
         rx: 8;
       }
-       /* Concrete Oracle Strategy: Teal Theme */
+       /* Concrete Oracle Strategy: Yellow Theme */
       .node-strategy {
-        fill: #ECFDF5; /* Emerald 50 */
-        stroke: #10B981; /* Emerald 500 */
+        fill: #F9EFE2; /* Warm pale */
+        stroke: #C79C74; /* Warm medium */
         stroke-width: 1.2;
         rx: 6;
       }
       
-      /* Driver/Environment Nodes: Red/Pink Theme */
+      /* Driver/Environment Nodes: Green Theme */
       .node-driver {
-        fill: #FFF1F2; /* Rose 50 */
-        stroke: #E11D48; /* Rose 600 */
+        fill: #EAF4EE; /* Mint light */
+        stroke: #9FBDAF; /* Mint medium */
         stroke-width: 1.5;
         rx: 8;
       }
@@ -186,7 +186,7 @@
         marker-end: url(#arrow-head);
       }
       .arrow-impl {
-        stroke: #94A3B8; /* Slate 400 */
+        stroke: #8A98A6; /* Neutral connector */
         stroke-width: 1.5;
         fill: none;
         stroke-dasharray: 5 3;
@@ -196,15 +196,15 @@
       }
       
       /* Inner Nodes */
-      .node-inner-blue { fill: #BFDBFE; stroke: #3B82F6; rx: 4; }
-      .node-inner-amber { fill: #FDE68A; stroke: #F59E0B; rx: 4; }
-      .node-inner-orange { fill: #FED7AA; stroke: #F97316; rx: 4; }
-      .node-inner-emerald { fill: #A7F3D0; stroke: #10B981; rx: 4; }
+      .node-inner-blue { fill: #CFE0EF; stroke: #8FAEC4; rx: 4; }
+      .node-inner-amber { fill: #E9C9A6; stroke: #C79C74; rx: 4; }
+      .node-inner-orange { fill: #E2B894; stroke: #B9855F; rx: 4; }
+      .node-inner-emerald { fill: #CFE1D8; stroke: #8FB2A3; rx: 4; }
 
       /* 6. Utility */
       .highlight-loop {
         fill: none;
-        stroke: #3B82F6; /* Blue 500 */
+        stroke: #8FAEC4; /* Cool muted */
         stroke-width: 3;
         stroke-opacity: 0.1;
       }
@@ -233,7 +233,7 @@
        markerUnits="strokeWidth">
       <path
          d="M0,0 L10,3 L0,6 L1.5,3 Z"
-         fill="#94A3B8"
+         fill="#8A98A6"
          id="path2" />
     </marker>
   </defs>
@@ -266,25 +266,25 @@
      y="140"
      width="550"
      height="340"
-     fill="#F3E8FF"
-     stroke="#D8B4FE"
-     stroke-width="1"
-     rx="16"
-     id="rect-core-interface" />
+      fill="#DDEFFD"
+      stroke="#BFD3E8"
+      stroke-width="1"
+      rx="16"
+      id="rect-core-interface" />
   <text
      x="325"
-     y="180"
-     text-anchor="middle"
-     class="zone-header"
-     fill="#6B21A8"
-     id="text-core-header">CORE INTERFACE</text>
+      y="180"
+      text-anchor="middle"
+      class="zone-header"
+      fill="#334155"
+      id="text-core-header">CORE INTERFACE</text>
   <text
      x="325"
-     y="200"
-     text-anchor="middle"
-     class="label-small"
-     fill="#7E22CE"
-     id="text-core-desc">Abstract Definitions • Interaction Logic</text>
+      y="200"
+      text-anchor="middle"
+      class="label-small"
+      fill="#6B7280"
+      id="text-core-desc">Abstract Definitions • Interaction Logic</text>
 
   <!-- Zone 1B: The Engine (Bottom Left) -->
   <rect
@@ -337,27 +337,27 @@
      id="rect7" />
   <text
      x="325"
-     y="270"
-     text-anchor="middle"
-     class="node-header"
-     fill="#9F1239"
-     id="text8">AbstractBendersEnv</text>
+      y="270"
+      text-anchor="middle"
+      class="node-header"
+      fill="#334155"
+      id="text8">AbstractBendersEnv</text>
   <text
      x="325"
-     y="290"
-     text-anchor="middle"
-     class="label-small"
-     fill="#881337"
-     id="text9">[Driver Interface]</text>
+      y="290"
+      text-anchor="middle"
+      class="label-small"
+      fill="#6B7280"
+      id="text9">[Driver Interface]</text>
   <!-- Inside Env: Master and Oracle Slots -->
   <line
-     x1="120"
-     y1="300"
-     x2="530"
-     y2="300"
-     stroke="#CBD5E1"
-     stroke-width="1"
-     id="line9" />
+      x1="120"
+      y1="300"
+      x2="530"
+      y2="300"
+      stroke="#C9D7E4"
+      stroke-width="1"
+      id="line9" />
   <!-- Master Slot -->
   <rect
      x="130"
@@ -389,18 +389,18 @@
      id="rect11" />
   <text
      x="450"
-     y="350"
-     text-anchor="middle"
-     class="node-header"
-     fill="#065F46"
-     id="text12">AbstractOracle</text>
+      y="350"
+      text-anchor="middle"
+      class="node-header"
+      fill="#334155"
+      id="text12">AbstractOracle</text>
   <text
      x="450"
-     y="370"
-     text-anchor="middle"
-     class="label-small"
-     fill="#047857"
-     id="text13">(Socket)</text>
+      y="370"
+      text-anchor="middle"
+      class="label-small"
+      fill="#6B7280"
+      id="text13">(Socket)</text>
   <!-- Flow within Env (v3 Loop Geometry) -->
   <!-- Master -> Oracle (Candidate) - Route around bottom -->
   <path
@@ -511,11 +511,11 @@
   <rect
      x="670"
      y="240"
-     width="310"
-     height="230"
-     class="zone-interface"
-     fill="#FFFFFF"
-     id="rect27" />
+      width="310"
+      height="230"
+      class="zone-interface"
+      fill="#F7EFE4"
+      id="rect27" />
   <text
      x="825"
      y="270"
@@ -589,11 +589,11 @@
   <rect
      x="1000"
      y="240"
-     width="310"
-     height="230"
-     class="zone-interface"
-     fill="#FFFFFF"
-     id="rect33" />
+      width="310"
+      height="230"
+      class="zone-interface"
+      fill="#F7EFE4"
+      id="rect33" />
   <text
      x="1155"
      y="270"
@@ -661,11 +661,11 @@
   <rect
      x="670"
      y="480"
-     width="310"
-     height="200"
-     class="zone-interface"
-     fill="#FFFFFF"
-     id="rect38" />
+      width="310"
+      height="200"
+      class="zone-interface"
+      fill="#F7EFE4"
+      id="rect38" />
   <text
      x="825"
      y="510"
@@ -689,10 +689,10 @@
      
   <!-- Inner Oracles for Split -->
   <rect x="735" y="570" width="80" height="40" class="node-inner-orange" />
-  <text x="775" y="595" text-anchor="middle" class="label-small" style="font-weight:600; fill:#9A3412">Oracle 1</text>
+   <text x="775" y="595" text-anchor="middle" class="label-small" style="font-weight:600; fill:#334155">Oracle 1</text>
   
   <rect x="835" y="570" width="80" height="40" class="node-inner-emerald" />
-  <text x="875" y="595" text-anchor="middle" class="label-small" style="font-weight:600; fill:#065F46">Oracle 2</text>
+   <text x="875" y="595" text-anchor="middle" class="label-small" style="font-weight:600; fill:#334155">Oracle 2</text>
 
   <text
      x="825"
@@ -704,11 +704,11 @@
   <rect
      x="1000"
      y="480"
-     width="310"
-     height="200"
-     class="zone-interface"
-     fill="#FFFFFF"
-     id="rect41" />
+      width="310"
+      height="200"
+      class="zone-interface"
+      fill="#F7EFE4"
+      id="rect41" />
   <text
      x="1155"
      y="510"
@@ -732,13 +732,13 @@
      
   <!-- Inner Oracles for Separable -->
   <rect x="1060" y="580" width="60" height="30" class="node-inner-blue" />
-  <text x="1090" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#1E3A8A">Oracle</text>
+   <text x="1090" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#334155">Oracle</text>
   
   <rect x="1125" y="580" width="60" height="30" class="node-inner-amber" />
-  <text x="1155" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#78350F">Oracle</text>
+   <text x="1155" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#334155">Oracle</text>
   
   <rect x="1190" y="580" width="60" height="30" class="node-inner-emerald" />
-  <text x="1220" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#064E3B">Oracle</text>
+   <text x="1220" y="600" text-anchor="middle" class="label-small" style="font-size:9px; fill:#334155">Oracle</text>
   
   <text
      x="1155"
@@ -765,14 +765,14 @@
      marker-end="none"
      id="path-driver-connector" />
   <!-- Arrowhead manually pointing UP to the interface -->
-  <path d="M 325,470 L 320,480 L 330,480 Z" fill="#94A3B8" />
+   <path d="M 325,470 L 320,480 L 330,480 Z" fill="#8A98A6" />
   <!-- G. Legend/Footer -->
   <rect
      x="50"
      y="740"
      width="1300"
      height="40"
-     fill="#F8FAFC"
+      fill="#F1F4F6"
      rx="4"
      id="rect47" />
   <text
