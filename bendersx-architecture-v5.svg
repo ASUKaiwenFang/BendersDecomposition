@@ -83,9 +83,10 @@
       }
 
       /* 2. Zones (Background Areas) */
+      /* 2. Zones (Background Areas) */
       .zone-engine {
-        fill: #E6F3FF; /* Pale Blue - Runtime/Engine */
-        stroke: #BFDBFE; /* Blue 200 */
+        fill: #FFF1F2; /* Rose 50 - Matching AbstractEnv */
+        stroke: #FECDD3; /* Rose 200 */
         stroke-width: 1;
         rx: 16;
       }
@@ -332,19 +333,21 @@
      y="240"
      width="450"
      height="230"
-     class="node-abstract"
+     class="node-abstract-env"
      id="rect7" />
   <text
      x="325"
      y="270"
      text-anchor="middle"
      class="node-header"
+     fill="#9F1239"
      id="text8">AbstractBendersEnv</text>
   <text
      x="325"
      y="290"
      text-anchor="middle"
      class="label-small"
+     fill="#881337"
      id="text9">[Driver Interface]</text>
   <!-- Inside Env: Master and Oracle Slots -->
   <line
@@ -753,8 +756,16 @@
      stroke-dasharray="8 4"
      id="path-main-connector" />
      
-  <!-- 2. Driver Connector: Removed per user request -->
-  <!-- Arrowhead: Removed per user request -->
+  <!-- 2. Driver Connector: Zone to Zone (Bottom -> Up) -->
+  <path
+     d="M 325,500 L 325,470"
+     class="arrow-impl"
+     stroke-width="3"
+     stroke-dasharray="8 4"
+     marker-end="none"
+     id="path-driver-connector" />
+  <!-- Arrowhead manually pointing UP to the interface -->
+  <path d="M 325,470 L 320,480 L 330,480 Z" fill="#94A3B8" />
   <!-- G. Legend/Footer -->
   <rect
      x="50"
