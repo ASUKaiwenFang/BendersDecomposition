@@ -40,90 +40,90 @@
     <style
        id="style1">
       .title {
-        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 15px;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        font-size: 14px;
         font-weight: 700;
-        fill: #0F172A;
+        fill: #111827;
       }
 
       .subtitle {
-        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 11.5px;
-        fill: #475569;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        font-size: 10.8px;
+        fill: #4B5563;
       }
 
       .cluster-title {
-        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 12.5px;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        font-size: 11.8px;
         font-weight: 700;
-        fill: #0F172A;
+        fill: #111827;
       }
 
       .box-title {
-        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 11.2px;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        font-size: 10.6px;
         font-weight: 700;
-        fill: #0F172A;
+        fill: #111827;
       }
 
       .box-text {
-        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 10px;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        font-size: 9.6px;
         fill: #1F2937;
       }
 
       .label {
-        font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, &quot;Helvetica&quot;, Arial, sans-serif;
-        font-size: 9.2px;
-        fill: #334155;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        font-size: 9px;
+        fill: #4B5563;
       }
 
       .outer {
         fill: none;
-        stroke: #334155;
+        stroke: #6B7280;
         stroke-width: 1.1;
       }
 
       .loop {
-        fill: #FFF8E8;
-        stroke: #B7791F;
+        fill: #F8FAFC;
+        stroke: #9CA3AF;
         stroke-width: 1.0;
-        stroke-dasharray: 4 3;
+        stroke-dasharray: 3 2;
       }
 
       .base {
-        fill: #EAF2FF;
-        stroke: #2B6CB0;
+        fill: #E8F0FB;
+        stroke: #4C78A8;
         stroke-width: 1.0;
       }
 
       .ext {
-        fill: #E9F7EF;
-        stroke: #2F855A;
+        fill: #EAF6EE;
+        stroke: #59A14F;
         stroke-width: 1.0;
       }
 
       .box {
         fill: #FFFFFF;
-        stroke: #334155;
+        stroke: #6B7280;
         stroke-width: 1.0;
       }
 
       .band {
-        fill: #FFF8E8;
-        stroke: #B7791F;
+        fill: #F3F4F6;
+        stroke: #9CA3AF;
         stroke-width: 1.0;
       }
 
       .arrow {
-        stroke: #1F2937;
+        stroke: #374151;
         stroke-width: 1.3;
         fill: none;
         marker-end: url(#arrow);
       }
 
       .arrow-dashed {
-        stroke: #475569;
+        stroke: #6B7280;
         stroke-width: 1.2;
         fill: none;
         stroke-dasharray: 4 3;
@@ -131,7 +131,7 @@
       }
 
       .zoom-line {
-        stroke: #94A3B8;
+        stroke: #CBD5E1;
         stroke-width: 1.1;
         fill: none;
         stroke-dasharray: 4 3;
@@ -139,14 +139,14 @@
 
       .zoom-focus {
         fill: none;
-        stroke: #94A3B8;
+        stroke: #CBD5E1;
         stroke-width: 1.1;
         stroke-dasharray: 4 3;
       }
 
       .iface-line {
         fill: none;
-        stroke: #5BB8F2;
+        stroke: #7AA6C2;
         stroke-width: 1.0;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -162,7 +162,7 @@
        markerUnits="strokeWidth">
       <path
          d="M0,0 L8,3 L0,6 Z"
-         fill="#475569"
+         fill="#374151"
          id="path1" />
     </marker>
   </defs>
@@ -175,13 +175,13 @@
      id="rect1"
      style="stroke-width:0.928376" />
   <text
-     x="657.48315"
+     x="681.5"
      y="95.213486"
      text-anchor="middle"
      class="title"
      id="text1">BendersX.jl Architecture</text>
   <text
-     x="685.98877"
+     x="681.5"
      y="124.04494"
      text-anchor="middle"
      class="subtitle"
@@ -250,8 +250,8 @@
      class="box-text"
      id="text7">control and schedule</text>
   <rect
-     x="431"
-     y="274"
+     x="437.00562"
+     y="269.16852"
      width="148"
      height="80"
      rx="12"
@@ -279,27 +279,13 @@
      class="box-text"
      id="text9">separation and cuts</text>
   <rect
-     x="622"
-     y="365"
+     x="627.31458"
+     y="365.7247"
      width="196"
      height="78"
      rx="12"
      class="zoom-focus"
      id="rect9" />
-  <circle
-     cx="813"
-     cy="385"
-     r="7"
-     fill="none"
-     stroke="#334155"
-     stroke-width="1.1"
-     id="circle9" />
-  <path
-     d="M818,390 L824,396"
-     stroke="#334155"
-     stroke-width="1.1"
-     fill="none"
-     id="path9" />
   <rect
      x="1040"
      y="261"
@@ -337,7 +323,7 @@
      id="circle11" />
   <!-- Core arrows -->
   <path
-     d="M706,253 L706,373"
+     d="M708,252.12138 L708,380.59418"
      class="arrow"
      id="path11" />
   <text
@@ -346,7 +332,7 @@
      class="label"
      id="text12">candidate solution</text>
   <path
-     d="M734,373 L734,253"
+     d="M732,380.59418 L732,252.12138"
      class="arrow"
      id="path12" />
   <text
@@ -355,7 +341,7 @@
      class="label"
      id="text13">cut</text>
   <path
-     d="M571,314 C615,306 660,306 706,314"
+     d="M571,314 C615,306 660,306 708,314"
      class="arrow-dashed"
      id="path13" />
   <!-- Environment variants (outside loop, left side) -->
@@ -463,12 +449,12 @@
      d="M782,554 L752,565 L752,595 L782,606"
      class="iface-line"
      id="path24-4-5"
-     style="fill:none;stroke:#5bb8f2;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
+     style="fill:none;stroke:#7aa6c2;stroke-width:1.21493;stroke-linecap:round;stroke-linejoin:round" />
   <path
      d="M782,552 L750,563 L750,597 L782,608"
      class="iface-line"
      id="path24-4-2"
-     style="fill:none;stroke:#5bb8f2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
+     style="fill:none;stroke:#7aa6c2;stroke-width:1.11278;stroke-linecap:round;stroke-linejoin:round" />
   <path
      d="M782,550 L748,561 L748,599 L782,610"
      class="iface-line"
@@ -572,16 +558,16 @@
      id="text31">TypicalOracle</text>
   <!-- BendersLibrary extension block -->
   <path
-     d="M820,480 L1180,480 L1180,680 L820,680 L820,604 L792,594 L792,566 L820,556 Z"
+     d="M820,480 L1220,480 L1220,680 L820,680 L820,604 L792,594 L792,566 L820,556 Z"
      class="ext"
      id="path31" />
   <path
-     d="M820,480 L1180,480 L1180,680 L820,680 L820,604 L792,594 L792,566 L820,556 Z"
+     d="M820,480 L1220,480 L1220,680 L820,680 L820,604 L792,594 L792,566 L820,556 Z"
      class="outer"
      id="path32" />
   <path
      d="m 803.10112,506.07865 h -16"
-     stroke="#475569"
+     stroke="#6B7280"
      stroke-width="1.1"
      stroke-dasharray="4, 3"
      fill="none"
@@ -608,7 +594,7 @@
      rx="6"
      class="box"
      id="rect37-3"
-     style="fill:#ffffff;stroke:#334155;stroke-width:1" />
+     style="fill:#ffffff;stroke:#6b7280;stroke-width:1" />
   <text
      x="936"
      y="548"
@@ -634,7 +620,6 @@
      y="593"
      text-anchor="middle"
      class="label"
-     style="font-size:10px;"
      id="text38">CFLPknapsckoracle</text>
   <rect
      x="871"
@@ -649,7 +634,6 @@
      y="621"
      text-anchor="middle"
      class="label"
-     style="font-size:10px;"
      id="text39">UFLPknapsackoracle</text>
   <rect
      x="1039"
@@ -667,7 +651,7 @@
      rx="6.4746265"
      class="box"
      id="rect40-2"
-     style="fill:#ffffff;stroke:#334155;stroke-width:0.906304" />
+     style="fill:#ffffff;stroke:#6b7280;stroke-width:0.906304" />
   <text
      x="1107"
      y="548"
@@ -690,26 +674,26 @@
      id="text41">SplitOracle</text>
   <!-- Zoom connectors from Loop Strategy to left variants -->
   <path
-     d="M431,274 L240,214"
+     d="M437.00562,269.16852 L240,214"
      class="zoom-line"
      id="path41" />
   <path
-     d="M431,354 L240,498"
+     d="M437.00562,349.16852 L240,498"
      class="zoom-line"
      id="path42" />
   <!-- Zoom connectors from Oracle to implementation blocks -->
   <path
-     d="M622,443 L268,480"
+     d="M627.31458,443.7247 L268,480"
      class="zoom-line"
      id="path43" />
   <path
-     d="M818,443 L1180,480"
+     d="M823.31458,443.7247 L1220,480"
      class="zoom-line"
      id="path44" />
   <!-- Plug-and-play principle band -->
   <rect
      x="170"
-     y="780"
+     y="764"
      width="1060"
      height="56"
      rx="10"
@@ -717,12 +701,12 @@
      id="rect44" />
   <!-- Plug-and-slot legend -->
   <g
-     transform="matrix(1.25,0,0,1.25,177.789,780.749)"
+     transform="matrix(1.25,0,0,1.25,177.789,764.749)"
      id="g50">
     <path
        d="M 0,6 H 104 V 14 L 90,19 V 33 L 104,38 V 44 H 0 Z"
-       fill="#eaf2ff"
-       stroke="#334155"
+       fill="#e8f0fb"
+       stroke="#6b7280"
        stroke-width="1"
        id="path45" />
     <path
@@ -739,34 +723,40 @@
        id="path47-2" />
     <path
        d="M 120,6 H 224 V 44 H 120 V 38 L 106,33 V 19 L 120,14 Z"
-       fill="#e9f7ef"
-       stroke="#334155"
+       fill="#eaf6ee"
+       stroke="#6b7280"
        stroke-width="1"
        id="path48" />
     <path
        d="M 114,26 H 98"
-       stroke="#475569"
+       stroke="#6b7280"
        stroke-width="1.1"
        stroke-dasharray="4, 3"
        fill="none"
        marker-end="url(#arrow)"
        id="path50" />
     <text
+       x="112"
+       y="2"
+       text-anchor="middle"
+       class="label"
+       id="text56">API interface</text>
+    <text
        x="52"
        y="28"
        text-anchor="middle"
        class="box-title"
-       id="text54">framework</text>
+       id="text54">Framework</text>
     <text
        x="172"
        y="28"
        text-anchor="middle"
        class="box-title"
-       id="text55">extension</text>
+       id="text55">New Module</text>
   </g>
   <text
      x="720"
-     y="814"
+     y="798"
      text-anchor="middle"
      class="box-text"
      id="text50">Plug-and-play extension: BendersBase stays stable while
@@ -776,25 +766,15 @@
      id="text51"
      style="writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect51);display:inline;fill:#1a1a1a" />
   <text
-     xml:space="preserve"
+     x="1110.6685"
+     y="622"
+     text-anchor="middle"
      class="label"
-     style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
-     x="1079.1573"
-     y="621.427"
-     id="text52"><tspan
-       sodipodi:role="line"
-       id="tspan52"
-       x="1079.1573"
-       y="621.427">otheroracle</tspan></text>
+     id="text52">OtherOracle</text>
   <text
-     xml:space="preserve"
+     x="937.2865"
+     y="648"
+     text-anchor="middle"
      class="label"
-     style="writing-mode:lr-tb;direction:ltr;fill:#1a1a1a"
-     x="882.51685"
-     y="647.51685"
-     id="text53"><tspan
-       sodipodi:role="line"
-       id="tspan53"
-       x="882.51685"
-       y="647.51685">Other oracle</tspan></text>
+     id="text53">OtherOracle</text>
 </svg>
