@@ -548,7 +548,7 @@
      class="label-small"
      style="font-size:10px"
      id="text33">Magnanti-Wong benders cut</text>
-  <!-- TOP RIGHT (Row 1, Col 2): Problem-Specific Oracle (Moved from Bottom Right) -->
+  <!-- TOP RIGHT (Row 1, Col 2): Problem-Specific Oracle -->
   <rect
      x="1000"
      y="240"
@@ -562,63 +562,64 @@
      y="270"
      text-anchor="middle"
      class="node-header"
-     id="text34">Problem-Specific TypicalOracle</text>
-  <!-- CFLPKnapsackOracle (Changed 'node-problem' to 'node-concrete' for color) -->
+     id="text34">Problem-Specific Oracle</text>
+  <!-- CFLPKnapsackOracle -->
   <rect
-     x="1045"
-     y="310"
-     width="220"
-     height="60"
+     x="1025"
+     y="300"
+     width="260"
+     height="70"
      class="node-concrete"
      id="rect34" />
   <text
      x="1155"
-     y="335"
+     y="325"
      text-anchor="middle"
      class="node-header"
-     id="text35">CFLPKnapsackOracle</text>
+     id="text35">CFLP Knapsack</text>
   <text
      x="1155"
-     y="355"
+     y="345"
      text-anchor="middle"
      class="label-small"
-     id="text36"><tspan
-       sodipodi:role="line"
-       id="tspan47"
-       x="1155"
-       y="355">KnapsackTechnique-Based benders cut</tspan><tspan
-       sodipodi:role="line"
-       id="tspan48"
-       x="1155"
-       y="368.75">for capacitated facility locaion problem</tspan></text>
-  <!-- UFLPKnapsackOracle (Changed 'node-problem' to 'node-concrete' for color) -->
+     style="font-size:10px"
+     id="text36">Knapsack technique-based cut</text>
+  <text
+     x="1155"
+     y="360"
+     text-anchor="middle"
+     class="label-small"
+     style="font-size:10px"
+     id="text36b">for Capacitated Facility Location</text>
+    
+  <!-- UFLPKnapsackOracle -->
   <rect
-     x="1045"
-     y="380"
-     width="220"
-     height="60"
+     x="1025"
+     y="390"
+     width="260"
+     height="70"
      class="node-concrete"
      id="rect36" />
   <text
      x="1155"
-     y="405"
+     y="415"
      text-anchor="middle"
      class="node-header"
-     id="text37">UFLPKnapsackOracle</text>
+     id="text37">UFLP Knapsack</text>
   <text
      x="1155"
-     y="425"
+     y="435"
      text-anchor="middle"
      class="label-small"
-     id="text38"><tspan
-       sodipodi:role="line"
-       id="tspan49"
-       x="1155"
-       y="425">KnapsackTechnique-Based benders cut</tspan><tspan
-       sodipodi:role="line"
-       id="tspan50"
-       x="1155"
-       y="438.75">for uncapacitated facility locaion problem</tspan></text>
+     style="font-size:10px"
+     id="text38">Knapsack technique-based cut</text>
+  <text
+     x="1155"
+     y="450"
+     text-anchor="middle"
+     class="label-small"
+     style="font-size:10px"
+     id="text38b">for Uncapacitated Facility Location</text>
   <!-- BOTTOM LEFT (Row 2, Col 1): Advanced Oracle -->
   <rect
      x="670"
