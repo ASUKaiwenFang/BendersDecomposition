@@ -753,16 +753,8 @@
      stroke-dasharray="8 4"
      id="path-main-connector" />
      
-  <!-- 2. Driver Connector (Bottom -> Up) -->
-  <path
-     d="M 325,560 L 325,470"
-     class="arrow-impl"
-     stroke-width="3"
-     stroke-dasharray="8 4"
-     marker-end="none"
-     id="path-driver-connector" />
-  <!-- Arrowhead manually pointing UP to the interface -->
-  <path d="M 325,470 L 320,480 L 330,480 Z" fill="#94A3B8" />
+  <!-- 2. Driver Connector: Removed per user request -->
+  <!-- Arrowhead: Removed per user request -->
   <!-- G. Legend/Footer -->
   <rect
      x="50"
