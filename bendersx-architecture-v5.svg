@@ -259,25 +259,47 @@
      id="text3">Fully Polymorphic Design: Swappable Environments &amp; Plug-and-Play Components</text>
   <!-- B. Zones -->
   <!-- Zone 1: The Engine (BendersBase.jl) -->
+  <!-- Zone 1A: Core Interface (Top Left) -->
   <rect
      x="50"
      y="140"
      width="550"
-     height="580"
-     class="zone-engine"
-     id="rect3" />
+     height="340"
+     fill="#F3E8FF"
+     stroke="#D8B4FE"
+     stroke-width="1"
+     rx="16"
+     id="rect-core-interface" />
   <text
      x="325"
      y="180"
      text-anchor="middle"
      class="zone-header"
-     id="text4">THE ENGINE</text>
+     fill="#6B21A8"
+     id="text-core-header">CORE INTERFACE</text>
   <text
      x="325"
      y="200"
      text-anchor="middle"
      class="label-small"
-     id="text5">Core Interfaces • Execution Drivers</text>
+     fill="#7E22CE"
+     id="text-core-desc">Abstract Definitions • Interaction Logic</text>
+
+  <!-- Zone 1B: The Engine (Bottom Left) -->
+  <rect
+     x="50"
+     y="500"
+     width="550"
+     height="220"
+     class="zone-engine"
+     id="rect-engine" />
+  <text
+     x="80"
+     y="525"
+     text-anchor="start"
+     class="zone-header"
+     style="font-size:14px"
+     id="text-engine-header">THE ENGINE</text>
   <!-- Zone 2: The Arsenal (BendersLibrary.jl) -->
   <rect
      x="650"
@@ -395,13 +417,7 @@
      class="label-small"
      id="text15">Cuts / Bounds</text>
   <!-- D. Concrete Drivers (Polymorphic Strategies) -->
-  <text
-     x="325"
-     y="490"
-     text-anchor="middle"
-     class="label-small"
-     fill="#94A3B8"
-     id="text16">Select Execution Strategy:</text>
+  <!-- Moved into The Engine Zone (Bottom Left) -->
   <!-- Driver 1: BendersSeq -->
   <rect
      x="70"
